@@ -17,7 +17,7 @@ git clone https://github.com/xaota/material
 При сборке `highlight.js` обязательно выберите `html/xml`, `javascript`, `json` и `css`.
 
 ## Как посмотреть StoryBook локально
-> [http://localhost/ui](http://localhost/material-kit)
+> [http://localhost/material-kit](http://localhost/material-kit)
 
 Используйте браузер Chrome.
 
