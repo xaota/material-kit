@@ -5,17 +5,121 @@
 <link rel="import" href="../../views/source"  id="view-source" />
 
 <link rel="import" href="/material/components/tooltip" id="material-tooltip" />
-<link rel="import" href="/material/components/button" id="material-button" />
+<link rel="import" href="/material/components/button"  id="material-button" />
+<link rel="import" href="/material/components/paper"   id="material-paper" />
 
 <template id="page-tooltip">
   <link rel="stylesheet" href="./page-tooltip.css" />
 
-  <view-page caption="Подсказки" hash="" description="">
-    <view-section caption="" element="">
-      <view-article caption="">
+  <view-page caption="Подсказки" hash="Tooltip" description="Компонент для показа подсказок к элементу">
+    <view-section caption="Подсказка к элементу при наведении" element="MaterialTooltip">
+      <view-article caption="Подсказки снаружи">
         <view-source>
-          <material-tooltip content="посдказка">
+          <material-tooltip content="посдказка сверху">
             <material-button>кнопка</material-button>
+          </material-tooltip>
+
+          <material-tooltip content="посдказка снизу" y="bottom">
+            <material-button>кнопка</material-button>
+          </material-tooltip>
+
+          <material-tooltip content="посдказка слева" x="left" y="center">
+            <material-button>кнопка</material-button>
+          </material-tooltip>
+
+          <material-tooltip content="посдказка справа" x="right" y="center">
+            <material-button>кнопка</material-button>
+          </material-tooltip>
+
+          <material-tooltip content="посдказка в центре" x="center" y="center">
+            <material-button>кнопка</material-button>
+          </material-tooltip>
+        </view-source>
+
+        <view-source>
+            <material-tooltip content="посдказка слева снизу" x="left" y="bottom">
+              <material-button>кнопка</material-button>
+            </material-tooltip>
+
+            <material-tooltip content="посдказка слева сверху" x="left" y="top">
+              <material-button>кнопка</material-button>
+            </material-tooltip>
+
+            <material-tooltip content="посдказка справа сверху" x="right" y="top">
+              <material-button>кнопка</material-button>
+            </material-tooltip>
+
+            <material-tooltip content="посдказка справа снизу" x="right" y="bottom">
+              <material-button>кнопка</material-button>
+            </material-tooltip>
+          </view-source>
+      </view-article>
+
+      <view-article caption="Подсказки внутри">
+        <view-source>
+          <material-tooltip content="посдказка сверху" inset>
+            <material-paper>
+              <p>Строка 1</p>
+              <p>Строка 2</p>
+            </material-paper>
+          </material-tooltip>
+
+          <material-tooltip content="посдказка снизу" y="bottom" inset>
+            <material-paper>
+              <p>Строка 1</p>
+              <p>Строка 2</p>
+            </material-paper>
+          </material-tooltip>
+
+          <material-tooltip content="посдказка<br/>слева" x="left" y="center" inset>
+            <material-paper>
+              <p>Строка 1</p>
+              <p>Строка 2</p>
+            </material-paper>
+          </material-tooltip>
+
+          <material-tooltip content="посдказка<br/>справа" x="right" y="center" inset>
+            <material-paper>
+              <p>Строка 1</p>
+              <p>Строка 2</p>
+            </material-paper>
+          </material-tooltip>
+
+          <material-tooltip content="посдказка<br/>в центре" x="center" y="center" inset>
+            <material-paper>
+              <p>Строка 1</p>
+              <p>Строка 2</p>
+            </material-paper>
+          </material-tooltip>
+        </view-source>
+
+        <view-source>
+          <material-tooltip content="посдказка<br/>слева<br/>снизу" x="left" y="bottom" inset>
+            <material-paper>
+              <p>Строка 1</p>
+              <p>Строка 2</p>
+            </material-paper>
+          </material-tooltip>
+
+          <material-tooltip content="посдказка<br/>слева<br/>сверху" x="left" y="top" inset>
+            <material-paper>
+              <p>Строка 1</p>
+              <p>Строка 2</p>
+            </material-paper>
+          </material-tooltip>
+
+          <material-tooltip content="посдказка<br/>справа<br/>сверху" x="right" y="top" inset>
+            <material-paper>
+              <p>Строка 1</p>
+              <p>Строка 2</p>
+            </material-paper>
+          </material-tooltip>
+
+          <material-tooltip content="посдказка<br/>справа<br/>снизу" x="right" y="bottom" inset>
+            <material-paper>
+              <p>Строка 1</p>
+              <p>Строка 2</p>
+            </material-paper>
           </material-tooltip>
         </view-source>
       </view-article>
