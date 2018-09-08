@@ -1,0 +1,23 @@
+<script src="./page-header.js" type="module"></script>
+<link rel="import" href="../../views/page"    id="view-page" />
+<link rel="import" href="../../views/section" id="view-section" />
+<link rel="import" href="../../views/article" id="view-article" />
+<link rel="import" href="../../views/source"  id="view-source" />
+
+<link rel="import" href="/material/components/header" id="material-header" />
+
+<template id="page-header">
+  <link rel="stylesheet" href="../../style/clear.css" />
+  <link rel="stylesheet" href="./page-header.css" />
+
+  <view-page caption="Колонтитул" hash="Header" description="Элемент для отображения сводноцй информации о текущем экране приложения.">
+    <view-section caption="Application Bar" element="MaterialHeader">
+      <view-article caption="Header">
+        <view-source>
+          <material-header caption="Заголовок" description="Подзаголовок"></material-header>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>

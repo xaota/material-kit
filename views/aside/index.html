@@ -1,0 +1,19 @@
+<script src="./view-aside.js" type="module"></script>
+
+<link rel="import" href="/material/components/list"      id="material-list" />
+<link rel="import" href="/material/components/list-item" id="material-list-item" />
+
+<template id="view-aside">
+  <link rel="stylesheet" href="./view-aside.css" />
+  <!-- <link rel="stylesheet" href="../../style/clear.css" /> -->
+
+  <div class="root">
+    <header>
+      <a href="#">Material</a>
+    </header>
+
+    <slot></slot>
+    <material-list></material-list>
+  </div>
+
+</template>

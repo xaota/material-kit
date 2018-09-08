@@ -1,0 +1,42 @@
+<script src="./page-tabs.js" type="module"></script>
+<link rel="import" href="../../views/page"    id="view-page" />
+<link rel="import" href="../../views/section" id="view-section" />
+<link rel="import" href="../../views/article" id="view-article" />
+<link rel="import" href="../../views/source"  id="view-source" />
+
+<link rel="import" href="/material/components/tabs" id="material-tabs" />
+
+<template id="page-tabs">
+  <link rel="stylesheet" href="../../style/clear.css" />
+  <link rel="stylesheet" href="./page-tabs.css" />
+
+  <view-page caption="Вкладки" hash="Tabs" description="Удобное переключение между несколькими разделами.">
+    <view-section caption="Панель вкладок" element="MaterialTabs">
+      <view-article>
+        <view-source>
+          <material-tabs>
+            <button slot="title">Tab 1</button>
+            <section>content panel 1</section>
+
+            <button slot="title" selected>Tab 2</button>
+            <section>content panel 2</section>
+
+            <button slot="title">Tab 3</button>
+            <section>content panel 3</section>
+          </material-tabs>
+        </view-source>
+
+        <!-- Using <a> instead of h2 still works! -->
+        <!-- <material-tabs>
+          <a slot="title">Title 1</a>
+          <a slot="title" selected>Title 2</a>
+          <a slot="title">Title 3</a>
+          <section>content panel 1</section>
+          <section>content panel 2</section>
+          <section>content panel 3</section>
+        </material-tabs> -->
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>

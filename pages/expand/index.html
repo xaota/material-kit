@@ -1,0 +1,31 @@
+<script src="./page-expand.js" type="module"></script>
+<link rel="import" href="../../views/page"    id="view-page" />
+<link rel="import" href="../../views/section" id="view-section" />
+<link rel="import" href="../../views/article" id="view-article" />
+<link rel="import" href="../../views/source"  id="view-source" />
+
+<link rel="import" href="/material/components/expand" id="material-expand" />
+
+<template id="page-expand">
+  <link rel="stylesheet" href="../../style/clear.css" />
+  <link rel="stylesheet" href="./page-expand.css" />
+
+  <view-page caption="Разворачиваемые блоки" hash="Expand" description="Элемент позволяющий упросить восприятие контента, скрыв менее важную информацию.">
+    <view-section caption="Разворачиваемая панель" element="MaterialExpand">
+      <view-article>
+        <view-source>
+          <material-expand summary="Разворачиваемая панель" description="Дополнительная информация">
+            Скрытое содержимое
+          </material-expand>
+        </view-source>
+      </view-article>
+    </view-section>
+
+    <view-section caption="Аккордеон">
+      <view-article>
+        <!-- Accordion -->
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>

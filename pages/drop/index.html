@@ -1,0 +1,38 @@
+<script src="./page-drop.js" type="module"></script>
+<link rel="import" href="../../views/page"    id="view-page" />
+<link rel="import" href="../../views/section" id="view-section" />
+<link rel="import" href="../../views/article" id="view-article" />
+<link rel="import" href="../../views/source"  id="view-source" />
+
+<link rel="import" href="/material/components/button"    id="material-button" />
+<link rel="import" href="/material/components/drop"      id="material-drop" />
+<link rel="import" href="/material/components/drop-root" id="material-drop-root" />
+<link rel="import" href="/material/components/list"      id="material-list" />
+<link rel="import" href="/material/components/list-item" id="material-list-item" />
+
+<template id="page-drop">
+  <link rel="stylesheet" href="./page-drop.css" />
+
+  <view-page caption="Выпадающие блоки" hash="Drops" description="Элемент, позволяющий мнгновенно выбрать значение из небольшого числа вариантов.">
+    <view-section caption="Выпадающая панель" element="MaterialDrop">
+      <view-article caption="">
+        <view-source>
+          <material-drop-root>
+            <material-button>кнопка</material-button>
+
+            <material-drop>
+              <material-list>
+                <material-list-item>Элемент 1</material-list-item>
+                <material-list-item>Элемент 2</material-list-item>
+                <material-list-item>Элемент 3</material-list-item>
+                <material-list-item>Элемент 4</material-list-item>
+                <material-list-item>Элемент 5</material-list-item>
+              </material-list>
+            </material-drop>
+          </material-drop-root>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>

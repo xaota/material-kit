@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+:host {
+
+}
+
+div.root {
+
+}
+
+slot {
+  display: none;
+}

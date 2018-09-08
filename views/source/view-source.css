@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+:host {
+  display: block;
+}
+
+slot {
+  display: block;
+  background: var(--background-light);
+  padding: var(--indent) 1.2em;
+  margin: var(--indent) calc(var(--indent) / 2);
+  border: 0.6em solid var(--color-default-light);
+  /* border-left-width: 1.2em; */
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+pre {
+  line-height: 1.5;
+  background: var(--background-light);
+  margin: var(--indent) calc(var(--indent) / 2);
+  margin-top: 0;
+  border: 0.6em solid var(--color-default-light);
+  border-left-width: 1.2em;
+}

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Web Components / Material UI Design</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="import" href="/material/components/header" id="material-header" />
+    <link rel="import" href="./views/aside"               id="view-aside" />
+
+    <link rel="import" href="./pages/button"  id="page-button" />
+    <link rel="import" href="./pages/input"   id="page-input" />
+    <link rel="import" href="./pages/select"  id="page-select" />
+    <link rel="import" href="./pages/toggle"  id="page-toggle" />
+    <link rel="import" href="./pages/chips"   id="page-chips" />
+    <link rel="import" href="./pages/expand"  id="page-expand" />
+    <link rel="import" href="./pages/tabs"    id="page-tabs" />
+    <link rel="import" href="./pages/header"  id="page-header" />
+    <link rel="import" href="./pages/paper"   id="page-paper" />
+    <link rel="import" href="./pages/list"    id="page-list" />
+    <link rel="import" href="./pages/drop"    id="page-drop" />
+    <link rel="import" href="./pages/tooltip" id="page-tooltip" />
+
+    <link rel="import" href="./pages/default" id="page-default" />
+    <script src="/highlight/highlight.pack.js"></script>
+  </head>
+  <body>
+    <material-header caption="Material UI Design" description="Web Components Library"></material-header>
+
+    <view-aside>
+      <a href="#button">Кнопки</a>
+      <a href="#input">Поля ввода</a>
+      <a href="#select">Поля выбора</a>
+      <a href="#toggle">Переключатели</a>
+      <a href="#chips">Фишки и Теги</a>
+      <a href="#expand">Развороты</a>
+      <a href="#tabs">Вкладки</a>
+      <a href="#header">Колонтитулы</a>
+      <a href="#paper">Страницы</a>
+      <a href="#lists">Списки</a>
+      <a href="#drops">Выпадающие блоки</a>
+      <a href="#tooltip">Всплывающая подсказка</a>
+    </view-aside>
+
+    <main>
+      <page-button  id="button"></page-button>
+      <page-input   id="input"></page-input>
+      <page-select  id="select"></page-select>
+      <page-toggle  id="toggle"></page-toggle>
+      <page-chips   id="chips"></page-chips>
+      <page-expand  id="expand"></page-expand>
+      <page-tabs    id="tabs"></page-tabs>
+      <page-header  id="header"></page-header>
+      <page-paper   id="paper"></page-paper>
+      <page-list    id="lists"></page-list>
+      <page-drop    id="drops"></page-drop>
+      <page-tooltip id="tooltip"></page-tooltip>
+
+      <page-default></page-default>
+    </main>
+
+    <script type="module">
+      const links = [...document.querySelectorAll('aside a')];
+      links.forEach(link => {
+        link.addEventListener('click', _ => {
+          links.forEach(e => e.classList.remove('active'));
+          link.classList.add('active');
+        })
+      });
+    </script>
+  </body>
+</html>
