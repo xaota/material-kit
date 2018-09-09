@@ -2,6 +2,7 @@
 
 :host {
   font-family: var(--font);
+  display: block;
 }
 
 div.root {

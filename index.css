@@ -26,12 +26,12 @@ body {
   height: var(--height);
 
   font-family: var(--font);
-  /* padding: var(--padding); */
 
   font-size: 16px;
   font-weight: 200;
 
-  /* position: relative; */
+  height: 100vh;
+  overflow: hidden;
 }
 
 material-header {
@@ -42,42 +42,22 @@ material-header {
   z-index: 2;
 }
 
-aside {
+view-aside {
+  grid-row: aside;
   grid-column: aside;
 }
 
-aside a {
+view-aside a.active {
+  color: red;
+}
+
+main {
+  grid-row: main;
+  grid-column: main;
   display: block;
-  background: var(--background-light);
-  color: silver;
-  margin: calc(var(--indent) / 2) 0;
-  padding: var(--padding);
-  text-decoration: none;
-  cursor: pointer;
-}
-
-aside a:hover {
-  color: var(--foreground);
-  border-right: 1px solid var(--foreground);
-}
-
-aside a:active, aside a.active {
-  color: gray;
-}
-
-aside > header > a {
-  background: none;
-  text-align: right;
-  font-size: 1.2em;
-}
-
-main:before {
-  display: block;
-  border-left: 1px solid gray;
-  content: '';
-  height: 100%;
-  float: left;
-  margin-left: calc(var(--indent) / -2);
+  overflow-y: auto;
+  height: 100vh - header; /* вау! */
+  z-index: 2;
 }
 
 main > * {
@@ -95,36 +75,3 @@ main > page-default {
 main > *:target ~ page-default {
   display: none;
 }
-
-/* h3, h4 {display: none; }
-h1, h2, h3, h4, h5, h6 { font-weight: 100; }
-h1 { font-size: 48px; }
-h2 { font-size: 32px; }
-h3 { font-size: 28px; }
-h4 { font-size: 24px; }
-h5 { font-size: 20px; }
-h6 { font-size: 18px; }
-
-p { line-height: 1.5; margin: 16px 0; }
-
-div.source {
-  background: var(--background-light);
-  padding: var(--indent) 1.2em;
-  margin: var(--indent);
-  border-left: 1.2em solid #383838;
-  line-height: 1.5;
-}
-div.source.center {
-  text-align: center;
-}
-pre {
-  font-family: "Courier New", Couriery, monospace;
-  font-weight: 100;
-  background: var(--background-light);
-  padding: var(--padding);
-  padding-left: 1.2em;
-  margin: var(--indent);
-  border-left: 1.2em solid #555;
-} */
-
-/* article { margin: var(--indent); } */
