@@ -1,8 +1,9 @@
-import Component from '../../script/Component.js'
+import Component from '/material/script/Component.js'
+
+import '/material/components/list/material-list.js'; // MaterialList
 import MaterialListItem from '/material/components/list-item/material-list-item.js';
 
-const element = 'view-aside';
-
+const component = Component.meta(import.meta.url, 'view-aside');
 /**
   *
   */
@@ -11,22 +12,15 @@ const element = 'view-aside';
     *
     */
     constructor() {
-      super(element);
-    }
-
-  /**
-    *
-    */
-    init() {
-      const content = this.content;
+      super(component);
     }
 
   /** */
-    mount() {
-      const shadow = this.shadow;
-      const slot = shadow.querySelector('slot');
+    mount(content) {
+      this;
+      const slot = content.querySelector('slot');
       slot.addEventListener('slotchange', () => {
-        const list = shadow.querySelector('material-list');
+        const list = content.querySelector('material-list');
         list.innerHTML = ''; // clear!
         const nodes = [...slot.assignedNodes()].filter(e => e.nodeName.toLowerCase() === 'a');
         nodes.forEach(node => {
@@ -38,7 +32,7 @@ const element = 'view-aside';
     }
   }
 
-customElements.define(element, AsideView);
+Component.define(component, AsideView);
 
 // #region [Private]
 

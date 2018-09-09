@@ -1,6 +1,15 @@
-import Component from '../../script/Component.js'
-const element = 'page-tooltip';
+import Component from '/material/script/Component.js';
 
+import '../../views/page/view-page.js';
+import '../../views/section/view-section.js';
+import '../../views/article/view-article.js';
+import '../../views/source/view-source.js';
+
+import '/material/components/tooltip/material-tooltip.js';
+import '/material/components/button/material-button.js';
+import '/material/components/paper/material-paper.js';
+
+const component = Component.meta(import.meta.url, 'page-tooltip');
 /**
   *
   */
@@ -9,11 +18,11 @@ const element = 'page-tooltip';
     *
     */
     constructor() {
-      super(element);
+      super(component);
     }
   }
 
-customElements.define(element, TooltipPage);
+Component.define(component, TooltipPage);
 
 // #region [Private]
 

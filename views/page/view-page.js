@@ -1,28 +1,21 @@
-import Component, {$} from '../../script/Component.js'
-const element = 'view-page';
+import Component from '/material/script/Component.js'
 
-/**
-  *
-  */
-  class PageView extends Component {
-  /**
-    *
-    */
+const component = Component.meta(import.meta.url, 'view-page');
+/** */
+  export default class PageView extends Component {
+  /** */
     constructor() {
-      super(element);
+      super(component);
     }
 
-  /**
-    *
-    */
-    init() {
-      const content = this.content;
+  /** */
+    ready(content) {
       const root = content.querySelector('div.root');
       if (this.description) root.insertBefore(create('p', this.description), root.firstChild);
       if (this.hash) root.insertBefore(create('h2', '#' + this.hash), root.firstChild);
       if (this.caption) root.insertBefore(create('h1', this.caption), root.firstChild);
-      return this;
     }
+
 
   /** */
     get caption() {
@@ -61,7 +54,7 @@ const element = 'view-page';
     }
   }
 
-customElements.define(element, PageView);
+Component.define(component, PageView);
 
 // #region [Private]
   /** */

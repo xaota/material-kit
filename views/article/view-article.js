@@ -1,6 +1,6 @@
-import Component from '../../script/Component.js'
-const element = 'view-article';
+import Component from '/material/script/Component.js';
 
+const component = Component.meta(import.meta.url, 'view-article');
 /**
   *
   */
@@ -9,14 +9,13 @@ const element = 'view-article';
     *
     */
     constructor() {
-      super(element);
+      super(component);
     }
 
   /**
     *
     */
-    init() {
-      const content = this.content;
+    ready(content) {
       const root = content.querySelector('div.root');
       if (this.caption) root.insertBefore(create('h3', this.caption), root.firstChild);
     }
@@ -34,7 +33,7 @@ const element = 'view-article';
     }
   }
 
-customElements.define(element, ArticleView);
+Component.define(component, ArticleView);
 
 // #region [Private]
 /** */

@@ -1,28 +1,13 @@
-import Component from '../../script/Component.js'
-const element = 'page-default';
+import Component from '/material/script/Component.js'
+import '../../views/page/view-page.js';
 
-/** 
-  * 
-  */
-  class DefaultPage extends Component {
-  /** 
-    * 
-    */
+const component = Component.meta(import.meta.url, 'page-default');
+/** */
+  export default class DefaultPage extends Component {
+  /** */
     constructor() {
-      super(element);
-    }
-
-  /** 
-    * 
-    */
-    init() {
-      const content = this.content;
-
+      super(component);
     }
   }
 
-customElements.define(element, DefaultPage);
-
-// #region [Private]
-
-// #endregion
+Component.define(component, DefaultPage);

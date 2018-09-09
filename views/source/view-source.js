@@ -1,6 +1,6 @@
-import Component from '../../script/Component.js'
-const element = 'view-source';
+import Component from '/material/script/Component.js';
 
+const component = Component.meta(import.meta.url, 'view-source');
 /**
   *
   */
@@ -9,39 +9,90 @@ const element = 'view-source';
     *
     */
     constructor() {
-      super(element);
-    }
-
-  /**
-    *
-    */
-    init() {
-      const content = this.content;
+      super(component);
     }
 
   /** */
-    mount() {
-      const slot = this.shadow.querySelector('slot');
+    mount(content) {
+      const slot = content.querySelector('slot');
       slot.addEventListener('slotchange', event => {
-        this.source();
+        // this.sourcePrism(slot);
+        this.sourceHLJS(slot);
       });
       return this;
     }
 
   /** */
-    source() {
-      const slot = this.shadow.querySelector('slot');
+    sourcePrism(slot) {
+      const code = source(0, ...slot.assignedNodes()).join('\n');
+      // const code = [...slot.assignedNodes()]
+          // .map(c => c.outerHTML)
+        // .filter(e => e && e.length)
+        // .join('\n')
+        // .split('\n')
+        // .map(e => e.trim())
+          // .join('\n');
+      // const code = slot.outerHTML;
+      // const value = window.hljs.fixMarkup(window.hljs.highlight('html', code));
+      // const root = document.createElement('div');
+      const pre = document.createElement('pre');
+      const view = document.createElement('code');
+      // pre.classList.
+      pre.classList.add('line-numbers'); // 'html'
+      // pre.style.whiteSpace = "pre-wrap";
+      // view.classList.add('language-markup');
+      // view.innerText = sanitizeHTML(code);
+      view.textContent = code;
+      // code.split('\n').map(e => {
+        // const view = document.createElement('code');
+        view.classList.add('language-markup');
+        // view.innerText = e;
+        pre.appendChild(view);
+        // pre.appendChild(document.createTextNode('\n'));
+        window.Prism.highlightElement(view) // highlightElement
+      // })
+      // console.log(value);
+      // view.innerHTML = value.value;
+      // pre.appendChild(view);
+      // root.appendChild(pre);
+      slot.parentNode.insertBefore(pre, slot.nextSibling);
+      // window.hljs.highlightBlock(view);
+      // console.log('prism', window.Prism);
+
+      // window.Prism.plugins.NormalizeWhitespace.setDefaults({
+      //   'remove-trailing': true,
+      //   'remove-indent': true,
+      //   'left-trim': true,
+      //   'right-trim': true,
+      //   // 'break-lines': 80,
+      //   'indent': 2,
+      //   'remove-initial-line-feed': true,
+      //   'tabs-to-spaces': 2,
+      //   // 'spaces-to-tabs': 4
+      // });
+
+      // const grammar = window.Prism.languages.markup;
+      // const value = window.Prism.highlight(code, grammar) // highlightElement
+      // console.log(value);
+      // pre.innerHTML = value;
+      // window.Prism.plugins.lineNumbers.getLine(pre);
+
+      return this;
+    }
+
+  /** */
+    sourceHLJS(slot) {
+      this;
       const code = source(0, ...slot.assignedNodes()).join('\n');
       const view = document.createElement('pre');
       view.classList.add('html');
-      view.innerText = code;
-      slot.parentNode.insertBefore(view, slot.nextSibling);
+      view.textContent = code;
       window.hljs.highlightBlock(view);
-      return this;
+      slot.parentNode.insertBefore(view, slot.nextSibling);
     }
   }
 
-customElements.define(element, SourceView);
+Component.define(component, SourceView);
 
 // #region [Private]
   /** */
@@ -50,21 +101,25 @@ customElements.define(element, SourceView);
       return []
         .concat(...nodes.map(node => node.tagName ? elementSource(node, deep) : elementValue(node, deep)))
         .filter(e => e.trim().length > 0);
+        // .map(e => e.length+';' + e);
     }
 
   /** */
     function elementSource(node, deep) {
-      let open =  "<" + node.tagName.toLowerCase();
+      const indent = new Array(deep * 2 + 1).join(' ');
+      const html = node.outerHTML;
+      if (!html.includes('\n')) return [indent + html];
+      const tag = node.tagName.toLowerCase();
+      let open =  "<" + tag;
       for (var i = 0; i < node.attributes.length; i++) {
           var attrib = node.attributes[i];
           open += " " + attrib.name + "=\"" + attrib.value + "\"";
       }
       open += ">";
-      const indent = new Array(deep * 2 + 1).join(' ');
       return [
         indent + open,
         ...source(deep + 1, ...node.childNodes),
-        indent + "</" + node.tagName.toLowerCase() + ">"
+        indent + "</" + tag + ">"
       ]
     }
 
@@ -74,4 +129,15 @@ customElements.define(element, SourceView);
         const indent = new Array(deep * 2 + 1).join(' ');
         return indent + value;
       }
+
+  /** Sanitize and encode all HTML in a user-submitted string
+    * @param  {String} str The user-submitted string
+    * @return {String} The sanitized string
+    * @copyright 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
+    */
+    function sanitizeHTML(str) {
+      var temp = document.createElement('div');
+      temp.textContent = str;
+      return temp.innerHTML;
+    }
 // #endregion

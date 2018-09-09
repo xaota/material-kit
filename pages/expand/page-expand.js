@@ -1,27 +1,26 @@
-import Component from '../../script/Component.js'
-const element = 'page-expand';
+import Component from '/material/script/Component.js';
 
-/** 
-  * 
+import '../../views/page/view-page.js';
+import '../../views/section/view-section.js';
+import '../../views/article/view-article.js';
+import '../../views/source/view-source.js';
+
+import '/material/components/expand/material-expand.js';
+
+const component = Component.meta(import.meta.url, 'page-expand');
+/**
+  *
   */
   class ExpandPage extends Component {
-  /** 
-    * 
+  /**
+    *
     */
     constructor() {
-      super(element);
-    }
-
-  /** 
-    * 
-    */
-    init() {
-      const content = this.content;
-
+      super(component);
     }
   }
 
-customElements.define(element, ExpandPage);
+Component.define(component, ExpandPage);
 
 // #region [Private]
 

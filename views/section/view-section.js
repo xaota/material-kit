@@ -1,6 +1,6 @@
-import Component from '../../script/Component.js'
-const element = 'view-section';
+import Component from '/material/script/Component.js';
 
+const component = Component.meta(import.meta.url, 'view-section');
 /**
   *
   */
@@ -9,14 +9,13 @@ const element = 'view-section';
     *
     */
     constructor() {
-      super(element);
+      super(component);
     }
 
   /**
     *
     */
-    init() {
-      const content = this.content;
+    ready(content) {
       const root = content.querySelector('div.root');
       if (this.element) root.insertBefore(create('h4', this.element), root.firstChild);
       if (this.caption) root.insertBefore(create('h3', this.caption), root.firstChild);
@@ -47,7 +46,7 @@ const element = 'view-section';
     }
   }
 
-customElements.define(element, SectionView);
+Component.define(component, SectionView);
 
 // #region [Private]
 /** */

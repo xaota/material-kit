@@ -1,27 +1,26 @@
-import Component from '../../script/Component.js'
-const element = 'page-tabs';
+import Component from '/material/script/Component.js';
 
-/** 
-  * 
+import '../../views/page/view-page.js';
+import '../../views/section/view-section.js';
+import '../../views/article/view-article.js';
+import '../../views/source/view-source.js';
+
+import '/material/components/tabs/material-tabs.js';
+
+const component = Component.meta(import.meta.url, 'page-tabs');
+/**
+  *
   */
   class TabsPage extends Component {
-  /** 
-    * 
+  /**
+    *
     */
     constructor() {
-      super(element);
-    }
-
-  /** 
-    * 
-    */
-    init() {
-      const content = this.content;
-
+      super(component);
     }
   }
 
-customElements.define(element, TabsPage);
+Component.define(component, TabsPage);
 
 // #region [Private]
 
