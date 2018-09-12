@@ -14,6 +14,10 @@
   --padding: var(--indent) calc(var(--indent) / 2);
 }
 
+html {
+  min-height: 100%;
+}
+
 body {
   background: var(--background);
   color:      var(--foreground);
@@ -30,8 +34,9 @@ body {
   font-size: 16px;
   font-weight: 200;
 
-  height: 100vh;
-  overflow: hidden;
+  height: 100%;
+  margin-top: calc(header);
+  /* overflow: hidden; */
 }
 
 material-header {
@@ -55,9 +60,9 @@ main {
   grid-row: main;
   grid-column: main;
   display: block;
-  overflow-y: auto;
-  height: 100vh - header; /* вау! */
-  z-index: 2;
+  /* height: 100vh - header; вау! */
+  /* overflow-y: auto;
+  overflow-x: visible; */
 }
 
 main > * {

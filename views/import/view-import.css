@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+:host {
+  display: block;
+}
+
+slot {
+  display: none;
+}
+
+pre {
+  line-height: 1.6;
+  background: var(--background-light);
+  margin: var(--indent) calc(var(--indent) / 2);
+  margin-top: 0;
+  padding: var(--indent);
+  border: 0.6em solid var(--color-default-light);
+  border-left-width: 1.2em;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}

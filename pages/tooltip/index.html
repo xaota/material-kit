@@ -2,6 +2,14 @@
   <link rel="stylesheet" href="./page-tooltip.css" />
 
   <view-page caption="Подсказки" hash="Tooltip" description="Компонент для показа подсказок к элементу">
+    <view-import>
+      import MaterialTooltip from '/material/components/tooltip/material-tooltip.js';
+
+      // также на этой странице использованы
+      import MaterialButton  from '/material/components/button/material-button.js';
+      import MaterialPaper   from '/material/components/paper/material-paper.js';
+    </view-import>
+
     <view-section caption="Подсказка к элементу при наведении" element="MaterialTooltip">
       <view-article caption="Подсказки снаружи">
         <view-source>

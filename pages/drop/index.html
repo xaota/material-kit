@@ -2,6 +2,16 @@
   <link rel="stylesheet" href="./page-drop.css" />
 
   <view-page caption="Выпадающие блоки" hash="Drops" description="Элемент, позволяющий мнгновенно выбрать значение из небольшого числа вариантов.">
+    <view-import>
+      import MaterialDropRoot from '/material/components/drop-root/material-drop-root.js';
+      import MaterialDrop     from '/material/components/drop/material-drop.js';
+
+      // также на этой странице использованы
+      import MaterialButton   from '/material/components/button/material-button.js';
+      import MaterialList     from '/material/components/list/material-list.js';
+      import MaterialListItem from '/material/components/list-item/material-list-item.js';
+    </view-import>
+
     <view-section caption="Выпадающая панель" element="MaterialDrop">
       <view-article caption="">
         <view-source>

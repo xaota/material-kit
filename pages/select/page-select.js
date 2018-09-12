@@ -4,6 +4,7 @@ import '../../views/page/view-page.js';
 import '../../views/section/view-section.js';
 import '../../views/article/view-article.js';
 import '../../views/source/view-source.js';
+import '../../views/import/view-import.js';
 
 import '/material/components/select/material-select.js';
 import '/material/components/list-item/material-list-item.js';
