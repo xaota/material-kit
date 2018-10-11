@@ -12,7 +12,7 @@ git clone https://github.com/xaota/material
 ```
 
 #### Зависимости
-> В корне сервера так же должна быть папка `/hightlight` с библиотекой [highlight.js](https://highlightjs.org/) для подсветки примеров использования (блоков с кодом).
+> В корне сервера так же должна быть папка `/highlight` с библиотекой [highlight.js](https://highlightjs.org/) для подсветки примеров использования (блоков с кодом).
 
 При сборке `highlight.js` обязательно выберите `html/xml`, `javascript`, `json` и `css`.
 
