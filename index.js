@@ -16,3 +16,4 @@ import './pages/paper/page-paper.js';
 import './pages/list/page-list.js';
 import './pages/drop/page-drop.js';
 import './pages/tooltip/page-tooltip.js';
+import './pages/breadcrumbs/page-breadcrumbs.js';

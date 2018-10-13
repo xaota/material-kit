@@ -1,0 +1,23 @@
+<template>
+  <link rel="stylesheet" href="./page-breadcrumbs.css" />
+
+  <view-page caption="Следы" hash="Breadcrumbs" description="Путь по карте сайта.">
+    <view-import>
+      import MaterialBreadcrumbs from '/material/components/list/material-breadcrumbs.js';
+    </view-import>
+
+    <view-section caption="Список элементов" element="MaterialList">
+      <view-article>
+        <view-source>
+          <material-breadcrumbs>
+            <a href="/">Главная</a>
+            <a href="/services">Услуги</a>
+            <a href="/services/product">Продукт</a>
+            Настройки
+          </material-breadcrumbs>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>
