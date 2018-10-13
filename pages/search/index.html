@@ -1,0 +1,18 @@
+<template>
+  <link rel="stylesheet" href="./page-search.css" />
+
+  <view-page caption="Поисковая строка" hash="Search" description="Отображение поисковой строки">
+    <view-import>
+      import MaterialSearch from '/material/components/search/material-search.js';
+    </view-import>
+
+    <view-section caption="Поиск" element="MaterialSearch">
+      <view-article>
+        <view-source>
+          <material-search></material-search>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>

@@ -1,0 +1,18 @@
+<template>
+  <link rel="stylesheet" href="./page-progress.css" />
+
+  <view-page caption="Загрузка" hash="Progress" description="Отображение процесса конечной загрузки">
+    <view-import>
+      import MaterialProgress from '/material/components/progress/material-progress.js';
+    </view-import>
+
+    <view-section caption="Уровень загрузки" element="MaterialProgress">
+      <view-article>
+        <view-source>
+          <material-progress></material-progress>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>

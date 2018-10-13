@@ -1,0 +1,18 @@
+<template>
+  <link rel="stylesheet" href="./page-calendar.css" />
+
+  <view-page caption="Календарь" hash="Calendar" description="Отображение календаря">
+    <view-import>
+      import MaterialCalendar from '/material/components/calendar/material-calendar.js';
+    </view-import>
+
+    <view-section caption="Календари и выбор дат" element="MaterialCalendar">
+      <view-article>
+        <view-source>
+          <material-calendar></material-calendar>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>

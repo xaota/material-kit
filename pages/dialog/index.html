@@ -1,0 +1,18 @@
+<template>
+  <link rel="stylesheet" href="./page-dialog.css" />
+
+  <view-page caption="Диалог (чат)" hash="Dialog" description="Отображение списка сообщений как диалог">
+    <view-import>
+      import MaterialDialog from '/material/components/dialog/material-dialog.js';
+    </view-import>
+
+    <view-section caption="Отображение диалога" element="MaterialDialog">
+      <view-article>
+        <view-source>
+          <material-dialog></material-dialog>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>

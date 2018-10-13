@@ -1,0 +1,18 @@
+<template>
+  <link rel="stylesheet" href="./page-title.css" />
+
+  <view-page caption="Колонтитул" hash="Title" description="Элемент для отображения сводноцй информации о текущем экране приложения.">
+    <view-import>
+      import MaterialTitle from '/material/components/title/material-title.js';
+    </view-import>
+
+    <view-section caption="Application Bar" element="MaterialTitle">
+      <view-article caption="Title">
+        <view-source>
+          <material-title caption="Заголовок" description="Подзаголовок"></material-title>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>

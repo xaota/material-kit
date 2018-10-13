@@ -6,13 +6,13 @@ import '../../views/article/view-article.js';
 import '../../views/source/view-source.js';
 import '../../views/import/view-import.js';
 
-import '/material/components/header/material-header.js';
+import '/material/components/blockquote/material-blockquote.js';
 
-const component = Component.meta(import.meta.url, 'page-header');
+const component = Component.meta(import.meta.url, 'page-blockquote');
 /**
   *
   */
-  class HeaderPage extends Component {
+  class BlockquotePage extends Component {
   /**
     *
     */
@@ -21,7 +21,7 @@ const component = Component.meta(import.meta.url, 'page-header');
     }
   }
 
-Component.define(component, HeaderPage);
+Component.define(component, BlockquotePage);
 
 // #region [Private]
 

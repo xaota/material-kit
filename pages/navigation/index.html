@@ -1,0 +1,54 @@
+<template>
+  <link rel="stylesheet" href="./page-navigation.css" />
+
+  <view-page caption="Панель навигации" hash="Navigation" description="Панель с ссылками">
+    <view-import>
+      import MaterialNavigation from '/material/components/navigation/material-navigation.js';
+    </view-import>
+
+    <view-section caption="Navigation Bar" element="MaterialNavigation">
+      <view-article>
+        <view-source>
+          <material-navigation>
+            <a href="/">ссылка 1</a>
+            <a href="/">ссылка 2</a>
+            <a href="/">ссылка 3</a>
+          </material-navigation>
+        </view-source>
+
+        <view-source>
+          <material-navigation>
+            <a href="/">ссылка 1</a>
+            <a href="/">ссылка 2</a>
+            <a href="/">ссылка 3</a>
+            <a href="/" slot="center">ссылка 4</a>
+            <a href="/" slot="center">ссылка 5</a>
+          </material-navigation>
+        </view-source>
+
+        <view-source>
+          <material-navigation>
+            <a href="/">ссылка 1</a>
+            <a href="/">ссылка 2</a>
+            <a href="/">ссылка 3</a>
+            <a href="/" slot="right">ссылка 4</a>
+            <a href="/" slot="right">ссылка 5</a>
+          </material-navigation>
+        </view-source>
+
+        <view-source>
+          <material-navigation>
+            <a href="/">ссылка 1</a>
+            <a href="/">ссылка 2</a>
+            <a href="/">ссылка 3</a>
+            <a href="/" slot="center">ссылка 4</a>
+            <a href="/" slot="center">ссылка 5</a>
+            <a href="/" slot="right">ссылка 6</a>
+            <a href="/" slot="right">ссылка 7</a>
+          </material-navigation>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>

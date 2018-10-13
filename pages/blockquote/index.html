@@ -1,0 +1,18 @@
+<template>
+  <link rel="stylesheet" href="./page-blockquote.css" />
+
+  <view-page caption="Цитата" hash="Blockquote" description="Отображение многострочной цитаты">
+    <view-import>
+      import MaterialBlockquote from '/material/components/blockquote/material-blockquote.js';
+    </view-import>
+
+    <view-section caption="Цитаты" element="MaterialBlockquote">
+      <view-article>
+        <view-source>
+          <material-blockquote></material-blockquote>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>

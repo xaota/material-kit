@@ -1,0 +1,18 @@
+<template>
+  <link rel="stylesheet" href="./page-table.css" />
+
+  <view-page caption="Таблица" hash="Table" description="Отображение структурированных данных в форме таблицы">
+    <view-import>
+      import MaterialTable from '/material/components/table/material-table.js';
+    </view-import>
+
+    <view-section caption="Таблицы" element="MaterialTable">
+      <view-article>
+        <view-source>
+          <material-table></material-table>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>

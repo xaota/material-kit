@@ -1,0 +1,18 @@
+<template>
+  <link rel="stylesheet" href="./page-panorama.css" />
+
+  <view-page caption="Панорама" hash="Panorama" description="Отображение панорамных и 360-градусных изображений">
+    <view-import>
+      import MaterialPanorama from '/material/components/panorama/material-panorama.js';
+    </view-import>
+
+    <view-section caption="Просмотр панорам" element="MaterialPanorama">
+      <view-article>
+        <view-source>
+          <material-panorama></material-panorama>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>

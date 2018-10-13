@@ -1,0 +1,18 @@
+<template>
+  <link rel="stylesheet" href="./page-payment.css" />
+
+  <view-page caption="Платежи" hash="Payment" description="Отображение банковской карты и полей ввода для оплаты">
+    <view-import>
+      import MaterialPayment from '/material/components/payment/material-payment.js';
+    </view-import>
+
+    <view-section caption="Оплата банковской картой" element="MaterialPayment">
+      <view-article>
+        <view-source>
+          <material-payment></material-payment>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>
