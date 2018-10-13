@@ -36,7 +36,7 @@ const component = Component.meta(import.meta.url, 'view-import');
     sourceHLJS(root) {
       this;
       root.classList.add('javascript');
-      window.hljs.highlightBlock(root);
+      if (window.hljs && window.hljs.highlightBlock) window.hljs.highlightBlock(root);
     }
   }
 

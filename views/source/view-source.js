@@ -87,7 +87,7 @@ const component = Component.meta(import.meta.url, 'view-source');
       const view = document.createElement('pre');
       view.classList.add('html');
       view.textContent = code;
-      window.hljs.highlightBlock(view);
+      if (window.hljs && window.hljs.highlightBlock) window.hljs.highlightBlock(view);
       slot.parentNode.insertBefore(view, slot.nextSibling);
     }
   }

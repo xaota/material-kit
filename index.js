@@ -18,3 +18,5 @@ import './pages/drop/page-drop.js';
 import './pages/tooltip/page-tooltip.js';
 import './pages/breadcrumbs/page-breadcrumbs.js';
 import './pages/message/page-message.js';
+import './pages/card/page-card.js';
+import './pages/badge/page-badge.js';

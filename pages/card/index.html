@@ -1,0 +1,18 @@
+<template>
+  <link rel="stylesheet" href="./page-card.css" />
+
+  <view-page caption="Карточка" hash="Card" description="Отображение информации и действий о конкретном объекте">
+    <view-import>
+      import MaterialCard from '/material/components/card/material-card.js';
+    </view-import>
+
+    <view-section caption="Простая карточка" element="MaterialCard">
+      <view-article>
+        <view-source>
+          <material-card></material-card>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>
