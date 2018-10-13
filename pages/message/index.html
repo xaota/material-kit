@@ -1,0 +1,28 @@
+<template>
+  <link rel="stylesheet" href="./page-message.css" />
+
+  <view-page caption="Сообщения" hash="Message" description="Отображение сообщений в быстрой переписке">
+    <view-import>
+      import MaterialMessage from '/material/components/message/material-message.js';
+    </view-import>
+
+    <view-section caption="Сообщение в чате" element="MaterialMessage">
+      <view-article>
+        <view-source>
+          <material-message>
+             Текст сообщения
+          </material-message>
+
+          <material-message left>
+            Текст сообщения
+          </material-message>
+
+          <material-message right>
+            Текст сообщения
+          </material-message>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>
