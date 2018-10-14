@@ -38,3 +38,4 @@ import './pages/calendar/page-calendar.js';
 import './pages/payment/page-payment.js';
 import './pages/navigation/page-navigation.js';
 import './pages/avatar/page-avatar.js';
+import './pages/sheet/page-sheet.js';

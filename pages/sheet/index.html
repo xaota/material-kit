@@ -1,0 +1,18 @@
+<template>
+  <link rel="stylesheet" href="./page-sheet.css" />
+
+  <view-page caption="Одноуровневый список элементов" hash="Sheet" description="Отображение списка элементов и взаимодействие с ними">
+    <view-import>
+      import MaterialSheet from '/material/components/sheet/material-sheet.js';
+    </view-import>
+
+    <view-section caption="Списки элементов" element="MaterialSheet">
+      <view-article>
+        <view-source>
+          <material-sheet></material-sheet>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>
