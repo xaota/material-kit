@@ -6,14 +6,13 @@ import '../../views/article/view-article.js';
 import '../../views/source/view-source.js';
 import '../../views/import/view-import.js';
 
-import '/material/components/input/material-input.js';
-import '/material/components/textarea/material-textarea.js';
+import '/material/components/avatar/material-avatar.js';
 
-const component = Component.meta(import.meta.url, 'page-input');
+const component = Component.meta(import.meta.url, 'page-avatar');
 /**
   *
   */
-  class InputPage extends Component {
+  class AvatarPage extends Component {
   /**
     *
     */
@@ -22,7 +21,7 @@ const component = Component.meta(import.meta.url, 'page-input');
     }
   }
 
-Component.define(component, InputPage);
+Component.define(component, AvatarPage);
 
 // #region [Private]
 

@@ -3,13 +3,22 @@
 
   <view-page caption="Поля ввода" hash="Input" description="Элемент, с помощью которого пользователь может вводить и редактировать текст.">
     <view-import>
-      import MaterialInput from '/material/components/input/material-input.js';
+      import MaterialInput    from '/material/components/input/material-input.js';
+      import MaterialTextarea from '/material/components/textarea/material-textarea.js';
     </view-import>
 
     <view-section caption="Однострочные поля ввода" element="MaterialInput">
       <view-article caption="Текстовое поле">
         <view-source>
           <material-input>Текстовое поле</material-input>
+        </view-source>
+      </view-article>
+    </view-section>
+  
+    <view-section caption="Многострочное поле ввода" element="MaterialTextarea">
+      <view-article>
+        <view-source>
+          <material-textarea></material-textarea>
         </view-source>
       </view-article>
     </view-section>
