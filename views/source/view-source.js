@@ -85,7 +85,7 @@ const component = Component.meta(import.meta.url, 'view-source');
       this;
       const code = source(0, ...slot.assignedNodes()).join('\n');
       const view = document.createElement('pre');
-      view.classList.add('html');
+      view.classList.add(this.getAttribute('lang') || 'html');
       view.textContent = code;
       if (window.hljs && window.hljs.highlightBlock) window.hljs.highlightBlock(view);
       slot.parentNode.insertBefore(view, slot.nextSibling);

@@ -15,6 +15,10 @@ slot {
   margin-bottom: 0;
 }
 
+:host([only]) slot {
+  display: none;
+}
+
 pre {
   line-height: 1.6;
   background: var(--background-light);
