@@ -2,11 +2,14 @@
   <link rel="stylesheet" href="./page-button.css" />
 
   <view-page caption="Кнопки" hash="Button" description="Элемент, с помощью которого пользователь может совершить действие.">
-    <view-import>
-      import MaterialButton from '/material/components/button/material-button.js';
-    </view-import>
-
     <view-section caption="Стандартные кнопки" element="MaterialButton">
+      <view-import>
+        import MaterialButton from '/material/components/button/material-button.js';
+
+        // также на этой странице используются
+        import MaterialIcon from '/material/components/icon/material-icon.js';
+      </view-import>
+
       <view-article caption="Основные">
         <view-source>
           <material-button>Default</material-button>
@@ -33,6 +36,35 @@
           <material-button mode="accent">Accent</material-button>
           <material-button mode="alert">Alert</material-button>
           <material-button mode="error">Error</material-button>
+        </view-source>
+      </view-article>
+
+      <view-article caption="Кнопки с иконками">
+        <p><a href="#icon">Иконки</a></p>
+        <view-source>
+          <material-button>
+            <material-icon>keyboard_voice</material-icon>
+          </material-button>
+          <material-button>
+            <material-icon>attach_file</material-icon>
+            <span>Добавить файл</span>
+          </material-button>
+          <material-button>
+            <span>Выключить микрофон</span>
+            <material-icon>mic_off</material-icon>
+          </material-button>
+        </view-source>
+      </view-article>
+    </view-section>
+
+    <view-section caption="Кнопка возврата" description="Используется для возврата на предыдущий экран">
+      <view-import>
+        import MaterialButtonBack from '/material/components/button-back/material-button-back.js';
+      </view-import>
+      <view-article>
+        <view-source>
+          <material-button-back></material-button-back>
+          <material-button-back>назад</material-button-back>
         </view-source>
       </view-article>
     </view-section>

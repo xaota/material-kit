@@ -7,6 +7,9 @@ import '../../views/source/view-source.js';
 import '../../views/import/view-import.js';
 
 import '/material/components/button/material-button.js';
+import '/material/components/button-back/material-button-back.js';
+
+import '/material/components/icon/material-icon.js';
 
 const component = Component.meta(import.meta.url, 'page-button');
 /**
