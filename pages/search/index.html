@@ -2,15 +2,77 @@
   <link rel="stylesheet" href="./page-search.css" />
 
   <view-page caption="Поисковая строка" hash="Search" description="Отображение поисковой строки">
-    <view-import>
-      import MaterialSearch from '/material/components/search/material-search.js';
-    </view-import>
-
     <view-section caption="Поиск" element="MaterialSearch">
+      <view-import>
+        import MaterialSearch from '/material/components/search/material-search.js';
+      </view-import>
+
+      <view-article caption="Поисковая панель">
+        <view-source>
+          <material-search>поиск</material-search>
+        </view-source>
+
+        <view-source>
+          <material-search right>поиск</material-search>
+        </view-source>
+      </view-article>
+
+      <view-article caption="Динамическая поисковая панель">
+        <view-source>
+          <material-search fold>поиск</material-search>
+        </view-source>
+
+        <view-source>
+          <material-search fold right>поиск</material-search>
+        </view-source>
+      </view-article>
+    </view-section>
+
+    <view-section caption="Поисковые посдсказки / результаты">
+      <view-import>
+        import MaterialSearchDrop from '/material/components/search-drop/material-search-drop.js';
+      </view-import>
+
       <view-article>
         <view-source>
-          <material-search></material-search>
+          <material-search-drop label="поиск">
+            <material-list-item>Элемент 1</material-list-item>
+            <material-list-item>Элемент 2</material-list-item>
+            <material-list-item>Элемент 3</material-list-item>
+            <material-list-item>Элемент 4</material-list-item>
+            <material-list-item>Элемент 5</material-list-item>
+          </material-search-drop>
         </view-source>
+
+        <view-source>
+          <material-search-drop label="поиск" right>
+            <material-list-item>Элемент 1</material-list-item>
+            <material-list-item>Элемент 2</material-list-item>
+            <material-list-item>Элемент 3</material-list-item>
+            <material-list-item>Элемент 4</material-list-item>
+            <material-list-item>Элемент 5</material-list-item>
+          </material-search-drop>
+        </view-source>
+
+        <view-source>
+            <material-search-drop label="поиск" fold>
+              <material-list-item>Элемент 1</material-list-item>
+              <material-list-item>Элемент 2</material-list-item>
+              <material-list-item>Элемент 3</material-list-item>
+              <material-list-item>Элемент 4</material-list-item>
+              <material-list-item>Элемент 5</material-list-item>
+            </material-search-drop>
+          </view-source>
+
+          <view-source>
+            <material-search-drop label="поиск" fold right>
+              <material-list-item>Элемент 1</material-list-item>
+              <material-list-item>Элемент 2</material-list-item>
+              <material-list-item>Элемент 3</material-list-item>
+              <material-list-item>Элемент 4</material-list-item>
+              <material-list-item>Элемент 5</material-list-item>
+            </material-search-drop>
+          </view-source>
       </view-article>
     </view-section>
   </view-page>

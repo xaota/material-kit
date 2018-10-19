@@ -7,6 +7,7 @@ import '../../views/source/view-source.js';
 import '../../views/import/view-import.js';
 
 import '/material/components/search/material-search.js';
+import '/material/components/search-drop/material-search-drop.js';
 
 const component = Component.meta(import.meta.url, 'page-search');
 /**
