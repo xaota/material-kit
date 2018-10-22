@@ -3,33 +3,19 @@
 
   <view-page caption="Вкладки" hash="Tabs" description="Удобное переключение между несколькими разделами.">
     <view-import>
-      import MaterialTabs from '/material/components/list/material-tabs.js';
+      import MaterialTabs     from '/material/components/list/material-tabs.js';
+      import MaterialTabsItem from '/material/components/tabs-item/material-tabs-item.js';
     </view-import>
 
     <view-section caption="Панель вкладок" element="MaterialTabs">
       <view-article>
         <view-source>
           <material-tabs>
-            <button slot="title">Tab 1</button>
-            <section>content panel 1</section>
-
-            <button slot="title" selected>Tab 2</button>
-            <section>content panel 2</section>
-
-            <button slot="title">Tab 3</button>
-            <section>content panel 3</section>
+            <material-tabs-item name="tab 1">content 1</material-tabs-item>
+            <material-tabs-item name="tab 2">content 2</material-tabs-item>
+            <material-tabs-item name="tab 3">content 3</material-tabs-item>
           </material-tabs>
         </view-source>
-
-        <!-- Using <a> instead of h2 still works! -->
-        <!-- <material-tabs>
-          <a slot="title">Title 1</a>
-          <a slot="title" selected>Title 2</a>
-          <a slot="title">Title 3</a>
-          <section>content panel 1</section>
-          <section>content panel 2</section>
-          <section>content panel 3</section>
-        </material-tabs> -->
       </view-article>
     </view-section>
   </view-page>
