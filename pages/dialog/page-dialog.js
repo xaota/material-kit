@@ -12,7 +12,7 @@ const component = Component.meta(import.meta.url, 'page-dialog');
 /**
   *
   */
-  class DialogPage extends Component {
+  export default class DialogPage extends Component {
   /**
     *
     */
