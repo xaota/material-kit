@@ -181,6 +181,13 @@ $support-02: #5aa700;
 $support-03: #efc100;
 $support-04: #5aaafa;
 
+// fabricator
+Dark   rgb(30, 30, 30)
+Light  rgb(242, 242, 242)
+Red    rgb(201, 55, 6)
+Yellow rgb(252, 207, 80)
+Blue   rgb(39, 102, 143)
+
   // error       : '#F9D0C4',
   // second      : '#F2FBFF',
   // primaryDark : '#1976D2',
