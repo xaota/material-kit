@@ -42,3 +42,4 @@ import './pages/sheet/page-sheet.js';
 // import './pages/camera/page-camera.js';
 import './pages/caption/page-caption.js';
 import './pages/text/page-text.js';
+import './pages/banner/page-banner.js';

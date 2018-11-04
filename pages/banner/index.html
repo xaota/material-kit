@@ -1,0 +1,31 @@
+<template>
+  <link rel="stylesheet" href="./page-banner.css" />
+
+  <view-page caption="Баннеры" hash="Banner" description="Отображает заметное сообщение и относящиеся к нему действия">
+    <view-import>
+      import MaterialBanner from '/material/components/banner/material-banner.js';
+
+      // также на этой странице используются
+      import MaterialAvatar from '/material/components/avatar/material-avatar.js';
+      import MaterialButton from '/material/components/button/material-button.js';
+      import MaterialIcon   from '/material/components/icon/material-icon.js';
+    </view-import>
+
+    <view-section caption="Баннеры" element="MaterialBanner">
+      <view-article>
+        <view-source>
+          <material-banner>
+            <material-avatar src="./content/avatar/avatar-8.jpg" slot="avatar"></material-avatar>
+            <p>Соединение с интернетом потеряно.</p>
+            <p>Приложение работает в автономном режиме.</p>
+            <material-button slot="action">
+              <material-icon>wifi</material-icon>
+              <span>включить wi-fi</span>
+            </material-button>
+          </material-banner>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>
