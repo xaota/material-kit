@@ -4,10 +4,13 @@
   <view-page caption="Сообщения" hash="Message" description="Отображение сообщений в быстрой переписке">
     <view-import>
       import MaterialMessage from '/material/components/message/material-message.js';
+
+      // также в примерах на этой странице используются
+      import MaterialAvatar from '/material/components/avatar/material-avatar.js';
     </view-import>
 
     <view-section caption="Сообщение в чате" element="MaterialMessage">
-      <view-article>
+      <view-article caption="Простые сообщения">
         <view-source>
           <material-message>
              Текст сообщения
@@ -18,6 +21,20 @@
           </material-message>
 
           <material-message right>
+            Текст сообщения
+          </material-message>
+        </view-source>
+      </view-article>
+
+      <view-article caption="Сообщения с аватарами">
+        <view-source>
+          <material-message left>
+            <material-avatar slot="avatar" src="./content/avatar/avatar-6.jpg"></material-avatar>
+            Текст сообщения
+          </material-message>
+
+          <material-message right>
+            <material-avatar slot="avatar" src="./content/avatar/avatar-7.jpg"></material-avatar>
             Текст сообщения
           </material-message>
         </view-source>
