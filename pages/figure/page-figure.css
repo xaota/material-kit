@@ -4,4 +4,7 @@
 
 }
 
-
+material-figure {
+  width: 450px;
+  border: 1px solid #ccc;
+}

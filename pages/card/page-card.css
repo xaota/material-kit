@@ -4,4 +4,9 @@
 
 }
 
+material-card {
+  display: inline-block;
+  width: 345px;
+}
+
 

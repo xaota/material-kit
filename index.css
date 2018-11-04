@@ -21,6 +21,7 @@ html {
 body {
   background: var(--background);
   color:      var(--foreground);
+  overscroll-behavior: none;
 
   display: grid;
   grid-template-columns: var(--aside) auto;

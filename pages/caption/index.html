@@ -1,0 +1,18 @@
+<template>
+  <link rel="stylesheet" href="./page-caption.css" />
+
+  <view-page caption="Название" hash="Caption" description="Отображает название чего-либо">
+    <view-import>
+      import MaterialCaption from '/material/components/caption/material-caption.js';
+    </view-import>
+
+    <view-section caption="Название" element="MaterialCaption">
+      <view-article>
+        <view-source>
+          <material-caption>Заголовок</material-caption>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>

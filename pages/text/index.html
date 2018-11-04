@@ -1,0 +1,18 @@
+<template>
+  <link rel="stylesheet" href="./page-text.css" />
+
+  <view-page caption="Текстовый блок" hash="Text" description="Отображает текстовое описание чего-либо">
+    <view-import>
+      import MaterialText from '/material/components/text/material-text.js';
+    </view-import>
+
+    <view-section caption="Описание" element="MaterialText">
+      <view-article>
+        <view-source>
+          <material-text>Простой текст для описания чего-либо.</material-text>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>

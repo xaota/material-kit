@@ -7,6 +7,7 @@ import '../../views/source/view-source.js';
 import '../../views/import/view-import.js';
 
 import '/material/components/message/material-message.js';
+import '/material/components/avatar/material-avatar.js';
 
 const component = Component.meta(import.meta.url, 'page-message');
 /**

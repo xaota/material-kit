@@ -3,14 +3,34 @@
 
   <view-page caption="Рамка" hash="Figure" description="Отображение медиаконтента и подпись">
     <view-import>
-      import MaterialFigure from '/material/components/figure/material-figure.js';
+      import MaterialFigure  from '/material/components/figure/material-figure.js';
+
+      // также на этой странице использованы
+      import MaterialCaption from '/material/components/caption/material-caption.js';
+      import MaterialText    from '/material/components/text/material-text.js';
     </view-import>
 
     <view-section caption="Рамки" element="MaterialFigure">
       <view-article>
         <view-source>
-          <material-figure></material-figure>
+          <material-figure>
+            <img src="content/images/contemplative-reptile.jpg" alt="lizard" />
+            <material-caption slot="description">Ящерицы</material-caption>
+            <material-text slot="description">
+              Широко распространенная группа рептилий,
+              насчитывающая более 6000 видов,
+              расположенных на всех континентах,
+              за исключением Антарктики
+            </material-text>
+          </material-figure>
         </view-source>
+
+        <pre>
+          material-figure {
+            width: 450px;
+            border: 1px solid #ccc;
+          }
+        </pre>
       </view-article>
     </view-section>
   </view-page>

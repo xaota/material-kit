@@ -39,3 +39,6 @@ import './pages/payment/page-payment.js';
 import './pages/navigation/page-navigation.js';
 import './pages/avatar/page-avatar.js';
 import './pages/sheet/page-sheet.js';
+// import './pages/camera/page-camera.js';
+import './pages/caption/page-caption.js';
+import './pages/text/page-text.js';
