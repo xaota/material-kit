@@ -57,6 +57,23 @@
       </view-article>
     </view-section>
 
+    <view-article caption="Заблокированные кнопки">
+      <view-source>
+        <material-button disabled mode="primary">disabled</material-button>
+        <material-button disabled mode="details">
+          <material-icon>keyboard_voice</material-icon>
+        </material-button>
+        <material-button disabled mode="accent">
+          <material-icon>attach_file</material-icon>
+          <span>Добавить файл</span>
+        </material-button>
+        <material-button disabled>
+          <span>Выключить микрофон</span>
+          <material-icon>mic_off</material-icon>
+        </material-button>
+      </view-source>
+    </view-article>
+
     <view-section caption="Кнопка возврата" description="Используется для возврата на предыдущий экран">
       <view-import>
         import MaterialButtonBack from '/material/components/button-back/material-button-back.js';
