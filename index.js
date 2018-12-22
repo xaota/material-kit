@@ -43,3 +43,4 @@ import './pages/sheet/page-sheet.js';
 import './pages/caption/page-caption.js';
 import './pages/text/page-text.js';
 import './pages/banner/page-banner.js';
+import './pages/panel/page-panel.js';

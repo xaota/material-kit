@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+:host {
+
+}
+
+material-panel {
+  width: 160px;
+  height: 400px;
+  display: inline-block;
+  vertical-align: top;
+}

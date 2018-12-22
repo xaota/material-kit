@@ -1,0 +1,62 @@
+<template>
+  <link rel="stylesheet" href="./page-panel.css" />
+
+  <view-page caption="Панель" hash="Panel" description="Блок с возможностью вертикального размещения элементов">
+    <view-import>
+      import MaterialPanel from '/material/components/panel/material-panel.js';
+    </view-import>
+
+    <view-section caption="панель" element="MaterialPanel">
+      <view-article>
+        <view-source>
+          <material-panel>
+            <a href="/" slot="top">ссылка 1</a>
+            <a href="/" slot="top">ссылка 2</a>
+            <a href="/" slot="top">ссылка 3</a>
+          </material-panel>
+
+          <material-panel>
+            <a href="/" slot="top">ссылка 1</a>
+            <a href="/" slot="top">ссылка 2</a>
+            <a href="/" slot="top">ссылка 3</a>
+            <a href="/">ссылка 4</a>
+            <a href="/">ссылка 5</a>
+          </material-panel>
+
+          <material-panel>
+            <a href="/">ссылка 1</a>
+            <a href="/">ссылка 2</a>
+            <a href="/">ссылка 3</a>
+          </material-panel>
+
+          <material-panel>
+            <a href="/">ссылка 1</a>
+            <a href="/">ссылка 2</a>
+            <a href="/">ссылка 3</a>
+            <a href="/" slot="bottom">ссылка 4</a>
+            <a href="/" slot="bottom">ссылка 5</a>
+          </material-panel>
+
+          <material-panel>
+            <a href="/" slot="top">ссылка 1</a>
+            <a href="/" slot="top">ссылка 2</a>
+            <a href="/" slot="top">ссылка 3</a>
+            <a href="/" slot="bottom">ссылка 4</a>
+            <a href="/" slot="bottom">ссылка 5</a>
+          </material-panel>
+
+          <material-panel>
+            <a href="/" slot="top">ссылка 1</a>
+            <a href="/" slot="top">ссылка 2</a>
+            <a href="/" slot="top">ссылка 3</a>
+            <a href="/">ссылка 4</a>
+            <a href="/">ссылка 5</a>
+            <a href="/" slot="bottom">ссылка 6</a>
+            <a href="/" slot="bottom">ссылка 7</a>
+          </material-panel>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>
