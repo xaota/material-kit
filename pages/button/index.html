@@ -4,10 +4,11 @@
   <view-page caption="Кнопки" hash="Button" description="Элемент, с помощью которого пользователь может совершить действие.">
     <view-section caption="Стандартные кнопки" element="MaterialButton">
       <view-import>
-        import MaterialButton from '/material/components/button/material-button.js';
+        import MaterialButton  from '/material/components/button/material-button.js';
 
         // также на этой странице используются
-        import MaterialIcon from '/material/components/icon/material-icon.js';
+        import MaterialIcon    from '/material/components/icon/material-icon.js';
+        import MaterialTooltip from '/material/components/tooltip/material-tooltip.js';
       </view-import>
 
       <view-article caption="Основные">
@@ -38,8 +39,31 @@
           <material-button mode="error">Error</material-button>
         </view-source>
       </view-article>
+    </view-section>
 
-      <view-article caption="Кнопки с иконками">
+    <view-section caption="Оформление кнопок">
+      <view-article caption="Кнопки с обводкой">
+        <view-source>
+          <material-button text="outline">кнопка</material-button>
+          <material-button mode="primary"   text="outline">кнопка</material-button>
+          <material-button mode="secondary" text="outline">кнопка</material-button>
+          <material-button mode="success"   text="outline">кнопка</material-button>
+          <material-button mode="failure"   text="outline">кнопка</material-button>
+        </view-source>
+      </view-article>
+      <view-article caption="Текстовые кнопки">
+        <view-source>
+          <material-button text>кнопка</material-button>
+          <material-button mode="primary"   text>кнопка</material-button>
+          <material-button mode="secondary" text>кнопка</material-button>
+          <material-button mode="success"   text>кнопка</material-button>
+          <material-button mode="failure"   text>кнопка</material-button>
+        </view-source>
+      </view-article>
+    </view-section>
+
+    <view-section caption="Кнопки с иконками">
+      <view-article>
         <p><a href="#icon">Иконки</a></p>
         <view-source>
           <material-button>
@@ -47,34 +71,64 @@
           </material-button>
           <material-button>
             <material-icon>attach_file</material-icon>
-            <span>Добавить файл</span>
+            <span>Вложение</span>
           </material-button>
           <material-button>
             <span>Выключить микрофон</span>
             <material-icon>mic_off</material-icon>
           </material-button>
         </view-source>
+
+        <view-source>
+          <material-button text="outline">
+            <material-icon>keyboard_voice</material-icon>
+          </material-button>
+          <material-button text="outline">
+            <material-icon>attach_file</material-icon>
+            <span>Вложение</span>
+          </material-button>
+          <material-button text="outline">
+            <span>Выключить микрофон</span>
+            <material-icon>mic_off</material-icon>
+          </material-button>
+        </view-source>
+
+        <view-source>
+          <material-button text>
+              <material-icon>keyboard_voice</material-icon>
+            </material-button>
+            <material-button text>
+              <material-icon>attach_file</material-icon>
+              <span>Вложение</span>
+            </material-button>
+            <material-button text>
+              <span>Выключить микрофон</span>
+              <material-icon>mic_off</material-icon>
+            </material-button>
+        </view-source>
+      </view-article>
+      <hr />
+      <view-import>
+        import MaterialButtonIcon from '/material/components/button-icon/material-button-icon.js';
+      </view-import>
+      <view-article element="MaterialButtonIcon">
+        <view-source>
+          <material-button-icon>attach_file</material-button-icon>
+          <material-button-icon>add</material-button-icon>
+          <material-button-icon>keyboard_voice</material-button-icon>
+
+          <material-button-icon text="outline">attach_file</material-button-icon>
+          <material-button-icon text="outline">add</material-button-icon>
+          <material-button-icon text="outline">keyboard_voice</material-button-icon>
+
+          <material-button-icon text>attach_file</material-button-icon>
+          <material-button-icon text>add</material-button-icon>
+          <material-button-icon text>keyboard_voice</material-button-icon>
+        </view-source>
       </view-article>
     </view-section>
 
-    <view-article caption="Заблокированные кнопки">
-      <view-source>
-        <material-button disabled mode="primary">disabled</material-button>
-        <material-button disabled mode="details">
-          <material-icon>keyboard_voice</material-icon>
-        </material-button>
-        <material-button disabled mode="accent">
-          <material-icon>attach_file</material-icon>
-          <span>Добавить файл</span>
-        </material-button>
-        <material-button disabled>
-          <span>Выключить микрофон</span>
-          <material-icon>mic_off</material-icon>
-        </material-button>
-      </view-source>
-    </view-article>
-
-    <view-section caption="Кнопка возврата" description="Используется для возврата на предыдущий экран">
+    <view-section caption="Кнопка возврата" description="Используется для возврата на предыдущий экран" element="MaterialButtonBack">
       <view-import>
         import MaterialButtonBack from '/material/components/button-back/material-button-back.js';
       </view-import>
@@ -82,6 +136,117 @@
         <view-source>
           <material-button-back></material-button-back>
           <material-button-back>назад</material-button-back>
+        </view-source>
+      </view-article>
+    </view-section>
+
+    <view-section caption="Кнопка с подсказкой" description="При наведении курсора мыши на такую кнопку появляется подсказка">
+      <view-article>
+        <p><a href="#tooltip">Подсказки</a></p>
+        <view-source>
+          <material-tooltip content="посдказка">
+            <material-button>кнопка</material-button>
+          </material-tooltip>
+        </view-source>
+      </view-article>
+      <hr />
+      <view-import>
+        import MaterialButtonTooltip from '/material/components/button-tooltip/material-button-tooltip.js';
+      </view-import>
+      <view-article element="MaterialButtonTooltip">
+        <view-source>
+          <material-button-tooltip content="подсказка">кнопка</material-button-tooltip>
+          <material-button-tooltip content="подсказка">
+            <material-icon>pets</material-icon>
+          </material-button-tooltip>
+          <material-button-tooltip content="подсказка">
+            <material-icon>extension</material-icon>
+            <span>кнопка</span>
+          </material-button-tooltip>
+        </view-source>
+
+        <view-source>
+          <material-button-tooltip text="outline" content="подсказка">кнопка</material-button-tooltip>
+          <material-button-tooltip text="outline" content="подсказка">
+            <material-icon>pets</material-icon>
+          </material-button-tooltip>
+          <material-button-tooltip text="outline" content="подсказка">
+            <material-icon>extension</material-icon>
+            <span>кнопка</span>
+          </material-button-tooltip>
+        </view-source>
+
+        <view-source>
+          <material-button-tooltip text content="подсказка">кнопка</material-button-tooltip>
+          <material-button-tooltip text content="подсказка">
+            <material-icon>pets</material-icon>
+          </material-button-tooltip>
+          <material-button-tooltip text content="подсказка">
+            <material-icon>extension</material-icon>
+            <span>кнопка</span>
+          </material-button-tooltip>
+        </view-source>
+      </view-article>
+    </view-section>
+
+    <view-section caption="Кнопка-иконка с подсказкой" description="Кнопка-иконка с подсказкой при наведении курсора мыши" element="MaterialButtonTooltipIcon">
+      <view-import>
+        import MaterialButtonTooltipIcon from '/material/components/button-tooltip-icon/material-button-tooltip-icon.js';
+      </view-import>
+      <view-article>
+        <view-source>
+          <material-button-tooltip-icon content="подсказка">account_circle</material-button-tooltip-icon>
+          <material-button-tooltip-icon text="outline" content="подсказка">account_circle</material-button-tooltip-icon>
+          <material-button-tooltip-icon text content="подсказка">account_circle</material-button-tooltip-icon>
+        </view-source>
+      </view-article>
+    </view-section>
+
+    <view-section caption="Заблокированные кнопки">
+      <view-article caption="Обычные кнопки">
+        <view-source>
+          <material-button disabled mode="primary">disabled</material-button>
+          <material-button disabled mode="details">
+            <material-icon>keyboard_voice</material-icon>
+          </material-button>
+          <material-button disabled mode="accent">
+            <material-icon>attach_file</material-icon>
+            <span>Добавить файл</span>
+          </material-button>
+          <material-button disabled>
+            <span>Выключить микрофон</span>
+            <material-icon>mic_off</material-icon>
+          </material-button>
+        </view-source>
+
+        <view-source>
+          <material-button disabled mode="primary" text="outline">disabled</material-button>
+          <material-button disabled mode="details" text="outline">
+            <material-icon>keyboard_voice</material-icon>
+          </material-button>
+          <material-button disabled mode="accent" text="outline">
+            <material-icon>attach_file</material-icon>
+            <span>Добавить файл</span>
+          </material-button>
+          <material-button disabled text="outline">
+            <span>Выключить микрофон</span>
+            <material-icon>mic_off</material-icon>
+          </material-button>
+        </view-source>
+
+        <view-source>
+          <material-button disabled mode="primary" text>disabled</material-button>
+          <material-button disabled mode="details" text>
+            <material-icon>keyboard_voice</material-icon>
+          </material-button>
+          <material-button disabled mode="accent" text>
+            <material-icon>attach_file</material-icon>
+            <span>Добавить файл</span>
+          </material-button>
+          <material-button disabled text>
+            <span>Выключить микрофон</span>
+            <material-icon>mic_off</material-icon>
+          </material-button>
         </view-source>
       </view-article>
     </view-section>
