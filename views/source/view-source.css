@@ -19,6 +19,11 @@ slot {
   display: none;
 }
 
+div.root {
+  /* max-width: 800px; */
+  overflow-x: scroll;
+}
+
 pre {
   line-height: 1.6;
   background: var(--background-light);

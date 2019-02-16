@@ -140,6 +140,44 @@
       </view-article>
     </view-section>
 
+    <view-section caption="Кнопка загрузки файла" description="Используется для отображения системного меню выбора файла">
+      <view-import>
+        import MaterialButtonUpload from '/material/components/button-upload/material-button-upload.js';
+      </view-import>
+      <view-article>
+        <view-source>
+          <material-button-upload>добавить файл</material-button-upload>
+          <material-button-upload text="outline">добавить файл</material-button-upload>
+          <material-button-upload text>добавить файл</material-button-upload>
+        </view-source>
+
+        <!-- <view-source>
+          <material-button-upload icon="attach_file">добавить файл</material-button-upload>
+          <material-button-upload icon="attach_file" text="outline">добавить файл</material-button-upload>
+          <material-button-upload icon="attach_file" text>добавить файл</material-button-upload>
+        </view-source>
+
+        <view-source>
+          <material-button-upload right icon="attach_file">добавить файл</material-button-upload>
+          <material-button-upload right icon="attach_file" text="outline">добавить файл</material-button-upload>
+          <material-button-upload right icon="attach_file" text>добавить файл</material-button-upload>
+        </view-source>
+
+        <view-source>
+          <material-button-upload icon="attach_file"></material-button-upload>
+          <material-button-upload icon="attach_file" text="outline"></material-button-upload>
+          <material-button-upload icon="attach_file" text></material-button-upload>
+        </view-source>
+
+        <view-source>
+          <material-button-upload disabled icon="attach_file">добавить файл</material-button-upload>
+          <material-button-upload disabled icon="attach_file" text="outline">добавить файл</material-button-upload>
+          <material-button-upload disabled icon="attach_file" text></material-button-upload>
+          <material-button-upload disabled icon="attach_file" text="outline" right>добавить файл</material-button-upload>
+        </view-source> -->
+      </view-article>
+    </view-section>
+
     <view-section caption="Кнопка с подсказкой" description="При наведении курсора мыши на такую кнопку появляется подсказка">
       <view-article>
         <p><a href="#tooltip">Подсказки</a></p>
@@ -255,6 +293,14 @@
           <material-button-tooltip-icon disabled content="подсказка">account_circle</material-button-tooltip-icon>
           <material-button-tooltip-icon disabled text="outline" content="подсказка">account_circle</material-button-tooltip-icon>
           <material-button-tooltip-icon disabled text content="подсказка">account_circle</material-button-tooltip-icon>
+        </view-source>
+      </view-article>
+
+      <view-article caption="Кнопка для загрузки файла">
+        <view-source>
+          <material-button-upload disabled>добавить файл</material-button-upload>
+          <material-button-upload disabled text="outline">добавить файл</material-button-upload>
+          <material-button-upload disabled text>добавить файл</material-button-upload>
         </view-source>
       </view-article>
     </view-section>

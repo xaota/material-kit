@@ -2,6 +2,8 @@
 
 :host {
   display: block;
+  /* width: 800px; */
+  /* box-sizing: content-box; */
 }
 
 slot {
@@ -9,6 +11,7 @@ slot {
 }
 
 pre {
+  overflow-x: scroll;
   line-height: 1.6;
   background: var(--background-light);
   margin: var(--indent) calc(var(--indent) / 2);

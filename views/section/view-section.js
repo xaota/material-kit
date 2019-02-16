@@ -4,7 +4,7 @@ const component = Component.meta(import.meta.url, 'view-section');
 /**
   *
   */
-  class SectionView extends Component {
+  export default class SectionView extends Component {
   /**
     *
     */
@@ -43,6 +43,14 @@ const component = Component.meta(import.meta.url, 'view-section');
       value !== undefined
         ? this.setAttribute("element", value)
         : this.removeAttribute("element");
+    }
+
+  /** Является ли узел элементом {SectionView} @static
+    * @param {HTMLElament} node проверяемый узел
+    * @return {boolean} node instanceof SectionView
+    */
+    static is(node) {
+      return Component.is(node, SectionView);
     }
   }
 
