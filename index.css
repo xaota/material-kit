@@ -10,7 +10,7 @@
   --foreground: #111;
   --foreground-dark: #000;
 
-  --aside: 20%;
+  --aside: 16%;
   --padding: var(--indent) calc(var(--indent) / 2);
 }
 
@@ -60,7 +60,8 @@ view-aside a.active {
 main {
   grid-row: main;
   grid-column: main;
-  display: block;
+  /* display: block; */
+  /* max-width: calc(100% - var(--aside)); */
   /* height: 100vh - header; вау! */
   /* overflow-y: auto;
   overflow-x: visible; */
