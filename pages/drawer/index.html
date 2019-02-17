@@ -1,0 +1,76 @@
+<template>
+  <link rel="stylesheet" href="./page-drawer.css" />
+
+  <view-page caption="Выдвижная панель" hash="Drawer" description="Панель с выдвигаемым разделом контента">
+    <view-import>
+      import MaterialDrawer     from '/material/components/drawer/material-drawer.js';
+      import MaterialDrawerItem from '/material/components/drawer-item/material-drawer-item.js';
+
+      // также на этой странице используются
+      import MaterialButtonIcon from '/material/components/button-icon/material-button-icon.js';
+      import MaterialList       from '/material/components/list/material-list.js';
+      import MaterialListItem   from '/material/components/list-item/material-list-item.js';
+    </view-import>
+
+    <view-section caption="Выдвижная панель" element="MaterialDrawer">
+      <view-article>
+        <view-source>
+          <material-drawer style="--paper: 200px">
+            <material-drawer-item icon="menu">
+              <material-list>
+                <material-list-item>Элемент 1</material-list-item>
+                <material-list-item>Элемент 2</material-list-item>
+                <material-list-item>Элемент 3</material-list-item>
+                <material-list-item>Элемент 4</material-list-item>
+                <material-list-item>Элемент 5</material-list-item>
+              </material-list>
+            </material-drawer-item>
+            <material-button-icon text>flag</material-button-icon>
+            <material-button-icon text slot="center">folder</material-button-icon>
+            <material-button-icon text slot="bottom">folder_open</material-button-icon>
+            <material-drawer-item icon="event_note" slot="bottom">
+              <material-list>
+                <material-list-item>Элемент 1</material-list-item>
+                <material-list-item>Элемент 2</material-list-item>
+                <material-list-item>Элемент 3</material-list-item>
+              </material-list>
+            </material-drawer-item>
+          </material-drawer>
+
+          <material-drawer style="--paper: 200px">
+            <material-drawer-item icon="style">
+              <material-list>
+                <material-list-item>Элемент 1</material-list-item>
+                <material-list-item>Элемент 2</material-list-item>
+                <material-list-item>Элемент 3</material-list-item>
+                <material-list-item>Элемент 4</material-list-item>
+                <material-list-item>Элемент 5</material-list-item>
+              </material-list>
+            </material-drawer-item>
+            <material-button-icon text>flag</material-button-icon>
+            <material-button-icon text slot="center">folder</material-button-icon>
+            <material-button-icon text slot="bottom">folder_open</material-button-icon>
+            <material-drawer-item icon="security" slot="bottom" expand>
+              <material-list>
+                <material-list-item>Элемент 1</material-list-item>
+                <material-list-item>Элемент 2</material-list-item>
+                <material-list-item>Элемент 3</material-list-item>
+              </material-list>
+            </material-drawer-item>
+          </material-drawer>
+        </view-source>
+      </view-article>
+
+      <view-source lang="css" only>
+          material-drawer {
+            height: 360px;
+            width: 64px;
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 300px;
+          }
+      </view-source>
+    </view-section>
+  </view-page>
+
+</template>

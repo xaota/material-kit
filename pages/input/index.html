@@ -1,7 +1,7 @@
 <template>
   <link rel="stylesheet" href="./page-input.css" />
 
-  <view-page caption="Поля ввода" hash="Input" description="Элемент, с помощью которого пользователь может вводить и редактировать текст.">
+  <view-page caption="Поля ввода" hash="Input" description="Элемент, с помощью которого пользователь может вводить и редактировать текст и другие данные">
     <view-section caption="Однострочные поля ввода" element="MaterialInput">
       <view-import>
         import MaterialInput from '/material/components/input/material-input.js';
@@ -17,6 +17,8 @@
         <view-source>
           <material-input icon="create">Текстовое поле</material-input>
           <material-input icon="create" right>Текстовое поле</material-input>
+          <material-input icon="create" fold>Текстовое поле</material-input>
+          <material-input icon="create" fold right>Текстовое поле</material-input>
         </view-source>
       </view-article>
     </view-section>
@@ -30,6 +32,20 @@
           <material-textarea>комментарий</material-textarea>
           <material-textarea icon="create">сообщение</material-textarea>
           <material-textarea icon="create" right>ответ</material-textarea>
+        </view-source>
+      </view-article>
+    </view-section>
+
+    <view-section caption="Поле выбора цвета" element="MaterialInputColor">
+      <view-import>
+        import MaterialInputColor from '/material/components/input-color/material-input-color.js';
+      </view-import>
+      <view-article>
+        <view-source>
+          <material-input-color>цвет</material-input-color>
+          <material-input-color right>цвет</material-input-color>
+          <material-input-color fold>цвет</material-input-color>
+          <material-input-color fold right>цвет</material-input-color>
         </view-source>
       </view-article>
     </view-section>

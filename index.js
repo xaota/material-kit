@@ -44,3 +44,5 @@ import './pages/caption/page-caption.js';
 import './pages/text/page-text.js';
 import './pages/banner/page-banner.js';
 import './pages/panel/page-panel.js';
+// import './pages/stack/page-stack.js';
+import './pages/drawer/page-drawer.js';

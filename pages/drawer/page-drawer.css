@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+:host {
+
+}
+
+material-drawer {
+  height: 360px;
+  width: 64px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 300px;
+}
