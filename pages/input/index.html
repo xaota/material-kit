@@ -36,6 +36,18 @@
       </view-article>
     </view-section>
 
+    <view-section caption="Слайдер" element="MaterialInputSlider">
+      <view-import>
+        import MaterialInputSlider from '/material/components/input-slider/material-input-slider.js';
+      </view-import>
+      <view-article caption="Обычный слайдер">
+        <view-source>
+          <material-input-slider min="0" max="100" value="30" step="1"></material-input-slider>
+          <material-input-slider min="0" max="100" value="30" step="1">название</material-input-slider>
+        </view-source>
+      </view-article>
+    </view-section>
+
     <view-section caption="Поле выбора цвета" element="MaterialInputColor">
       <view-import>
         import MaterialInputColor from '/material/components/input-color/material-input-color.js';

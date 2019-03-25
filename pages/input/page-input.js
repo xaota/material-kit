@@ -7,6 +7,7 @@ import '../../views/source/view-source.js';
 import '../../views/import/view-import.js';
 
 import '/material/components/input/material-input.js';
+import '/material/components/input-slider/material-input-slider.js';
 import '/material/components/input-count/material-input-count.js';
 import '/material/components/input-color/material-input-color.js';
 import '/material/components/textarea/material-textarea.js';
