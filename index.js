@@ -46,3 +46,4 @@ import './pages/banner/page-banner.js';
 import './pages/panel/page-panel.js';
 // import './pages/stack/page-stack.js';
 import './pages/drawer/page-drawer.js';
+import './pages/timeline/page-timeline.js';

@@ -1,0 +1,49 @@
+<template>
+  <link rel="stylesheet" href="./page-timeline.css" />
+
+  <view-page caption="Хроника" hash="Timeline" description="Отображает элементы  вдоль ленты событий">
+    <view-section caption="Хроника" element="MaterialTimeline">
+      <view-import>
+        import MaterialTimeline     from '/material/components/timeline/material-timeline.js';
+        import MaterialTimelineItem from '/material/components/timeline-item/material-timeline-item.js';
+      </view-import>
+
+      <view-article>
+        <view-source>
+          <material-timeline>
+            <material-timeline-item caption="Technology" subtitle="Subtitle">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
+              <img src="http://placehold.it/1000x500" alt="Graphic">
+            </material-timeline-item>
+
+            <material-timeline-item caption="Confidence" subtitle="Subtitle">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
+              <img src="http://placehold.it/1000x500" alt="Graphic">
+            </material-timeline-item>
+
+            <material-timeline-item caption="Adaptation" subtitle="Subtitle">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
+              <img src="http://placehold.it/1000x500" alt="Graphic">
+            </material-timeline-item>
+
+            <material-timeline-item caption="Consistency" subtitle="Subtitle">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
+              <img src="http://placehold.it/1000x500" alt="Graphic">
+            </material-timeline-item>
+
+            <material-timeline-item caption="Conversion" subtitle="Subtitle">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
+              <img src="http://placehold.it/1000x500" alt="Graphic">
+            </material-timeline-item>
+          </material-timeline>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>
