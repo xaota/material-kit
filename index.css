@@ -40,7 +40,7 @@ body {
   /* overflow: hidden; */
 }
 
-material-title {
+material-header {
   grid-row: header;
   grid-column: header;
   position: sticky;
