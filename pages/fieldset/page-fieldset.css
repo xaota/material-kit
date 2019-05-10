@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+:host {
+
+}
+
+material-fieldset {
+  width: 300px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 1em;
+}
+
+material-input, material-button {
+  display: block;
+  width: 94%;
+  margin: 0.5em auto;
+}
+
+material-button {
+  margin-top: 1em;
+}

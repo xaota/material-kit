@@ -1,0 +1,51 @@
+<template>
+  <link rel="stylesheet" href="./page-fieldset.css" />
+
+  <view-page caption="Группа" hash="Fieldset" description="Группировка компонент, преимущественно контролов и полей ввода">
+    <view-section caption="Группа" element="MaterialFieldset">
+      <view-import>
+        import MaterialFieldset from '/material/components/fieldset/material-fieldset.js';
+
+        // также на этой странице используются
+        import MaterialButton from '/material/components/button/material-button.js';
+        import MaterialInput  from '/material/components/input/material-input.js';
+      </view-import>
+
+      <view-article>
+        <view-source>
+          <material-fieldset chaption="авторизация">
+            <material-input>логин</material-input>
+            <material-input>пароль</material-input>
+            <material-button mode="details">войти</material-button>
+          </material-fieldset>
+
+          <material-fieldset chaption="авторизация" fold>
+            <material-input>логин</material-input>
+            <material-input>пароль</material-input>
+            <material-button mode="details">войти</material-button>
+          </material-fieldset>
+        </view-source>
+
+        <view-source lang="css" only>
+material-fieldset {
+  width: 300px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 1em;
+}
+
+material-input, material-button {
+  display: block;
+  width: 94%;
+  margin: 0 auto;
+}
+
+material-button {
+  margin-top: 1em;
+}
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>
