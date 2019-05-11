@@ -1,15 +1,63 @@
 <template>
   <link rel="stylesheet" href="./page-dialog.css" />
 
-  <view-page caption="Диалог (чат)" hash="Dialog" description="Отображение списка сообщений как диалог">
+  <view-page caption="Диалоговые и Модальные окна" hash="Dialog" description="Отображение всплывающих окон">
     <view-import>
       import MaterialDialog from '/material/components/dialog/material-dialog.js';
+
+      // также на этой странице используются
+      import MaterialText    from '/material/components/text/material-text.js';
+      import MaterialButton  from '/material/components/button/material-button.js';
     </view-import>
 
-    <view-section caption="Отображение диалога" element="MaterialDialog">
-      <view-article>
+    <view-section caption="Модальное окно" element="MaterialDialog">
+      <view-article caption="Внешний вид">
         <view-source>
-          <material-dialog></material-dialog>
+          <material-dialog caption="Заголовок">
+            <material-text>
+              Простой текст для описания основного содержимого внутри popup-окна.
+              Впрочем, тут может быть абсолютно любой блок.
+            </material-text>
+            <material-button slot="action" mode="primary" text>понятно</material-button>
+            <material-button slot="action" mode="primary" text>отмена</material-button>
+          </material-dialog>
+        </view-source>
+
+        <view-source lang="css" only>
+material-dialog {
+  max-width: 600px;
+}
+        </view-source>
+      </view-article>
+
+      <view-article caption="Отображение с помощью JavaScript">
+        <view-source id="show-dialog">
+          <material-button>показать</material-button>
+        </view-source>
+
+        <view-source lang="javascript" only>
+const button = root.querySelector('material-button');
+button.addEventListener('click', showDialog);
+
+async function showDialog() {
+  const dialog = new MaterialDialog("Заголовок")
+    .content(new MaterialText('какой-то текст'))
+    .action('Закрыть', MaterialDialog.resolve('готово'))
+    .action('Отмена',  MaterialDialog.reject('отмена'))
+    .options({scroll: false});
+  try {
+    const resolve = await dialog.open();
+    button.innerHTML = 'результат: ' + resolve;
+  } catch (error) {
+    button.innerHTML = 'результат: ' + error;
+  } finally {
+    dialog.close();
+  }
+}
+
+// также, извне можно завершить модальное окно с помощью методов:
+dialog.resolve('успешное завершение');
+dialog.reject('неуспешное завершение');
         </view-source>
       </view-article>
     </view-section>

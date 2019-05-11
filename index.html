@@ -36,50 +36,59 @@
         properties / attributes
         styles
       -->
-
-      <a href="#caption">Название</a>
-      <a href="#text">Текстовый блок</a>
-      <a href="#avatar">Аватар</a>
-      <a href="#icon">Иконка</a>
-      <a href="#button">Кнопки</a>
-      <a href="#input">Поля ввода</a>
-      <a href="#search">Поисковая строка</a>
-      <a href="#select">Поля выбора</a>
-      <a href="#toggle">Переключатели</a>
-      <a href="#fieldset">Группа</a>
-      <a href="#chips">Фишки и Теги</a>
-      <a href="#tooltip">Подсказки</a>
-      <a href="#breadcrumbs">Следы</a>
-      <a href="#message">Сообщения</a>
-      <a href="#figure">Рамка</a>
-      <a href="#card">Карточки</a>
-      <a href="#paper">Страницы</a>
-      <a href="#lists">Списки</a>
-      <a href="#banner">Баннеры</a>
-      <a href="#title">Колонтитулы</a>
-      <a href="#header">Заголовок</a>
-      <a href="#expand">Развороты</a>
-      <a href="#tabs">Вкладки</a>
-      <a href="#drops">Выпадающие блоки</a>
-      <a href="#panel">Панель</a>
-      <a href="#navigation">Панель навигации</a>
-      <a href="#drawer">Выдвижная панель</a>
-      <a href="#badge">Метка</a>
-      <a href="#blockquote">Цитата</a>
-      <a href="#loader">Загрузка</a>
-      <a href="#table">Таблица</a>
-      <a href="#dialog">Диалоговые окна</a>
-      <a href="#grid">Сетка</a>
-      <a href="#footer">Подвал</a>
-      <a href="#copyright">Копирайт</a>
-      <a href="#parallax">Паралакс</a>
-      <a href="#panorama">Панорама</a>
-      <a href="#calendar">Календарь</a>
-      <a href="#payment">Платежи</a>
-      <a href="#sheet">Список элементов</a>
-      <!-- <a href="#stack">Стопка</a> -->
-      <!-- <a href="#camera">Камера</a> -->
-      <a href="#timeline">Хроника</a>
+      <material-fieldset caption="Типография">
+        <a href="#caption">Название</a>
+        <a href="#text">Текстовый блок</a>
+        <a href="#blockquote">Цитата</a>
+        <a href="#breadcrumbs">Следы</a>
+        <a href="#copyright">Копирайт</a>
+        <a href="#avatar">Аватар</a>
+        <a href="#icon">Иконка</a>
+        <a href="#chips">Фишки и Теги</a>
+        <a href="#badge">Метка</a>
+        <a href="#tooltip">Подсказки</a>
+        <a href="#message">Сообщения</a>
+      </material-fieldset>
+      <material-fieldset caption="Элементы управления">
+        <a href="#button">Кнопки</a>
+        <a href="#input">Поля ввода</a>
+        <a href="#search">Поисковая строка</a>
+        <a href="#select">Поля выбора</a>
+        <a href="#toggle">Переключатели</a>
+        <a href="#fieldset">Группа</a>
+        <a href="#calendar">Календарь</a>
+      </material-fieldset>
+      <material-fieldset caption="Блоки">
+        <a href="#figure">Рамка</a>
+        <a href="#card">Карточки</a>
+        <a href="#paper">Страницы</a>
+        <a href="#lists">Списки</a>
+        <a href="#banner">Баннеры</a>
+        <a href="#title">Колонтитулы</a>
+        <a href="#header">Заголовок</a>
+        <a href="#panel">Панель</a>
+        <a href="#navigation">Панель навигации</a>
+        <a href="#footer">Подвал</a>
+        <a href="#sheet">Список элементов</a>
+      </material-fieldset>
+      <material-fieldset caption="Динамические элементы">
+        <a href="#tabs">Вкладки</a>
+        <a href="#dialog">Диалоговые окна</a>
+        <a href="#drawer">Выдвижная панель</a>
+        <a href="#expand">Развороты</a>
+        <a href="#drops">Выпадающие блоки</a>
+      </material-fieldset>
+      <material-fieldset caption="Другие элементы">
+        <a href="#loader">Загрузка</a>
+        <a href="#table">Таблица</a>
+        <a href="#grid">Сетка</a>
+        <a href="#parallax">Паралакс</a>
+        <a href="#panorama">Панорама</a>
+        <a href="#payment">Платежи</a>
+        <!-- <a href="#stack">Стопка</a> -->
+        <!-- <a href="#camera">Камера</a> -->
+        <a href="#timeline">Хроника</a>
+      </material-fieldset>
     </view-aside>
 
     <main>
@@ -131,7 +140,7 @@
     </main>
 
     <script type="module">
-      const links = [...document.querySelectorAll('aside a')];
+      const links = [...document.querySelectorAll('view-aside a')];
       links.forEach(link => {
         link.addEventListener('click', _ => {
           links.forEach(e => e.classList.remove('active'));

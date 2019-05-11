@@ -6,7 +6,8 @@ import '../../views/article/view-article.js';
 import '../../views/source/view-source.js';
 import '../../views/import/view-import.js';
 
-import '/material/components/dialog/material-dialog.js';
+import MaterialDialog from '/material/components/dialog/material-dialog.js';
+import MaterialText   from '/material/components/text/material-text.js';
 
 const component = Component.meta(import.meta.url, 'page-dialog');
 /**
@@ -18,6 +19,34 @@ const component = Component.meta(import.meta.url, 'page-dialog');
     */
     constructor() {
       super(component);
+    }
+
+  /** */
+    mount(content) {
+      const root = content.querySelector('#show-dialog');
+
+      const button = root.querySelector('material-button');
+      button.addEventListener('click', showDialog);
+
+      /** */
+      async function showDialog() {
+        const dialog = new MaterialDialog("Заголовок")
+          .content(new MaterialText('какой-то текст'))
+          .action('Закрыть', MaterialDialog.resolve('готово'))
+          .action('Отмена',  MaterialDialog.reject('отмена'))
+          .options({scroll: false});
+
+        try {
+          const resolve = await dialog.open();
+          button.innerHTML = 'результат: ' + resolve;
+        } catch (error) {
+          button.innerHTML = 'результат: ' + error;
+        } finally {
+          dialog.close();
+        }
+      }
+
+      return this;
     }
   }
 

@@ -4,4 +4,6 @@
 
 }
 
-
+material-dialog {
+  max-width: 600px;
+}

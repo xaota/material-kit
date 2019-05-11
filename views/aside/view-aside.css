@@ -9,5 +9,5 @@ div.root {
 }
 
 slot {
-  display: none;
+  /* display: none; */
 }

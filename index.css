@@ -10,7 +10,7 @@
   --foreground: #111;
   --foreground-dark: #000;
 
-  --aside: 16%;
+  --aside: 18%;
   --padding: var(--indent) calc(var(--indent) / 2);
 }
 
@@ -19,6 +19,8 @@ html {
 }
 
 body {
+  margin: 0;
+  padding: 0;
   background: var(--background);
   color:      var(--foreground);
   overscroll-behavior: none;
@@ -27,7 +29,7 @@ body {
   grid-template-columns: var(--aside) auto;
   grid-template-rows: fit-content(120px) auto;
   grid-template-areas: "header header" "aside main";
-  grid-column-gap: var(--indent);
+  grid-column-gap: 2px;
   height: var(--height);
 
   font-family: var(--font);
@@ -49,6 +51,7 @@ material-header {
 }
 
 view-aside {
+  padding-top: 1em;
   grid-row: aside;
   grid-column: aside;
 }
