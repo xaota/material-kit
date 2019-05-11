@@ -11,7 +11,7 @@ slot {
 }
 
 pre {
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
   line-height: 1.6;
   background: var(--background-light);
   margin: var(--indent) calc(var(--indent) / 2);

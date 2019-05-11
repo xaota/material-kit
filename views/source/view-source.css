@@ -21,7 +21,7 @@ slot {
 
 div.root {
   /* max-width: 800px; */
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
 }
 
 pre {
