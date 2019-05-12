@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+material-avatar {
+  display: inline-block;
+}
+
 material-avatar[aria-label="avatar-test"] {
   --size: 72px;
 }
