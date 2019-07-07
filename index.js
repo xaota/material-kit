@@ -26,7 +26,6 @@ import './pages/icon/page-icon.js';
 import './pages/blockquote/page-blockquote.js';
 import './pages/figure/page-figure.js';
 import './pages/loader/page-loader.js';
-import './pages/progress/page-progress.js';
 import './pages/table/page-table.js';
 import './pages/search/page-search.js';
 import './pages/dialog/page-dialog.js';

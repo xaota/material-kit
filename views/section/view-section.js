@@ -46,7 +46,7 @@ const component = Component.meta(import.meta.url, 'view-section');
     }
 
   /** Является ли узел элементом {SectionView} @static
-    * @param {HTMLElament} node проверяемый узел
+    * @param {HTMLElement} node проверяемый узел
     * @return {boolean} node instanceof SectionView
     */
     static is(node) {

@@ -6,7 +6,24 @@
       import MaterialLoader from '/material/components/loader/material-loader.js';
     </view-import>
 
-    <view-section caption="Бесконечная загрузка" element="MaterialLoader">
+    <view-section caption="Индикатор" element="MaterialMeter">
+      <view-article>
+        <view-source>
+          <!-- <material-meter min="0" max="100" value="45"></material-meter> -->
+          <material-meter min="0" max="100" value="85"></material-meter>
+        </view-source>
+      </view-article>
+    </view-section>
+
+    <view-section caption="Конечный процесс" element="MaterialProgress">
+        <view-article>
+          <view-source>
+            <material-progress></material-progress>
+          </view-source>
+        </view-article>
+      </view-section>
+
+    <view-section caption="Бесконечный процесс" element="MaterialLoader">
       <view-article>
         <view-source>
           <material-loader></material-loader>
