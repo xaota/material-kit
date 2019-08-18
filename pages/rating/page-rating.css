@@ -3,3 +3,7 @@
 :host {
 
 }
+
+material-rating {
+  display: block;
+}
