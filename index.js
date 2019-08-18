@@ -50,3 +50,5 @@ import './pages/drawer/page-drawer.js';
 import './pages/timeline/page-timeline.js';
 import './pages/fieldset/page-fieldset.js';
 import './pages/timepicker/page-timepicker.js';
+import './pages/rating/page-rating.js';
+import './pages/slider/page-slider.js';

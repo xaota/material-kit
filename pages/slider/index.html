@@ -1,0 +1,23 @@
+<template>
+  <link rel="stylesheet" href="./page-slider.css" />
+
+  <view-page caption="Галерея" hash="Slider" description="Слайдер для переключения каких-либо элементов, например, изображений">
+    <view-section caption="Галерея" element="MaterialSlider">
+      <view-import>
+        import MaterialSlider from '/material/components/slider/material-slider.js';
+        import MaterialSlider from '/material/components/slider-item/material-slider-item.js';
+      </view-import>
+
+      <view-article>
+        <view-source>
+          <material-slider>
+          <material-slider-item></material-slider-item>
+          <material-slider-item></material-slider-item>
+          <material-slider-item></material-slider-item>
+          </material-slider>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>

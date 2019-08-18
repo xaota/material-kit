@@ -1,0 +1,18 @@
+<template>
+  <link rel="stylesheet" href="./page-rating.css" />
+
+  <view-page caption="Рейтинг" hash="Rating" description="Отображение или установка оценки чего-либо с помощью звёздочек">
+    <view-section caption="Рейтинг" element="MaterialRating">
+      <view-import>
+        import MaterialRating from '/material/components/rating/material-rating.js';
+      </view-import>
+
+      <view-article>
+        <view-source>
+          <material-rating></material-rating>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>
