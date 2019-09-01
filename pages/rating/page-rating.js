@@ -55,7 +55,6 @@ const component = Component.meta(import.meta.url, 'page-rating');
           .options({scroll: false});
         try {
           const value = await dialog.open();
-          console.log(value);
           const rating = new MaterialRating(value);
           root.querySelector('#show-rating').appendChild(rating);
         } catch (error) {
