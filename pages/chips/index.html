@@ -2,17 +2,27 @@
   <link rel="stylesheet" href="./page-chips.css" />
 
   <view-page caption="Фишки и Теги" hash="Chips" description="Отображение нформации о введенных данных, параметре или действии.">
-    <view-import>
-      import MaterialChip from '/material/components/chip/material-chip.js';
-    </view-import>
-
     <view-section caption="Фишки" element="MaterialChip">
+      <view-import>
+        import MaterialChip from '/material/components/chip/material-chip.js';
+      </view-import>
       <view-article>
         <view-source>
           <material-chip>chip</material-chip>
         </view-source>
       </view-article>
     </view-section>
+
+    <view-section caption="Фишки с подсказкой" element="MaterialChipTooltip">
+        <view-import>
+          import MaterialChipTooltip from '/material/components/chip-tooltip/material-chip-tooltip.js';
+        </view-import>
+        <view-article>
+          <view-source>
+            <material-chip-tooltip content="подсказка">chip</material-chip-tooltip>
+          </view-source>
+        </view-article>
+      </view-section>
   </view-page>
 
 </template>

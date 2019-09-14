@@ -7,6 +7,7 @@ import '../../views/source/view-source.js';
 import '../../views/import/view-import.js';
 
 import '/material/components/chip/material-chip.js';
+import '/material/components/chip-tooltip/material-chip-tooltip.js';
 
 const component = Component.meta(import.meta.url, 'page-chips');
 /**
