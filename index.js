@@ -52,3 +52,4 @@ import './pages/fieldset/page-fieldset.js';
 import './pages/timepicker/page-timepicker.js';
 import './pages/rating/page-rating.js';
 import './pages/slider/page-slider.js';
+import './pages/fab/page-fab.js';

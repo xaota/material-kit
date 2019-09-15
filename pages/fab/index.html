@@ -1,0 +1,31 @@
+<template>
+  <link rel="stylesheet" href="./page-fab.css" />
+
+  <view-page caption="Floating Action Button" hash="FAB" description="Кнопка, предназначенная для целевого действия на экране приложения">
+    <view-section caption="Плавающие Кнопки" element="MaterialFAB">
+      <view-import>
+        import MaterialFAB from '/material/components/fab/material-fab.js';
+      </view-import>
+
+      <view-article>
+        <view-source>
+          <material-fab>create</material-fab>
+          <material-fab>person_add</material-fab>
+          <material-fab>arrow_upward</material-fab>
+          <material-fab>play</material-fab>
+          <material-fab>navigation</material-fab>
+          <material-fab>send</material-fab>
+          <material-fab>add_comment</material-fab>
+          <material-fab>more_vert</material-fab>
+        </view-source>
+
+        <view-source lang="css" only>
+material-fab {
+  display: inline-block;
+}
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>
