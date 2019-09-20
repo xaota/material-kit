@@ -20,6 +20,14 @@ const component = Component.meta(import.meta.url, 'page-chips');
     constructor() {
       super(component);
     }
+
+  /** */
+    mount(node) {
+      const remove = node.querySelector('material-chip[action]');
+      remove.addEventListener('action', e => console.log('action', e.detail, e));
+      remove.addEventListener('click',  e => console.log('click', e));
+      return this;
+    }
   }
 
 Component.define(component, ChipsPage);

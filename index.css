@@ -85,3 +85,9 @@ main > page-default {
 main > *:target ~ page-default {
   display: none;
 }
+
+material-fab {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+}

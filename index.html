@@ -146,6 +146,8 @@
       <page-default></page-default>
     </main>
 
+    <material-fab>arrow_upward</material-fab>
+
     <script type="module">
       const links = [...document.querySelectorAll('view-aside a')];
       links.forEach(link => {
@@ -154,6 +156,9 @@
           link.classList.add('active');
         })
       });
+
+      document.querySelector('material-fab')
+        .addEventListener('click', _ => window.scrollTo({top: 0, behavior: "smooth"}));
     </script>
   </body>
 </html>
