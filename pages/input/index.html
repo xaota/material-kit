@@ -72,5 +72,29 @@
         </view-source>
       </view-article>
     </view-section>
+
+    <view-section caption="Поле ввода списка тегов" element="MaterialInputChips">
+      <view-import>
+        import MaterialInputChips from '/material/components/input-chips/material-input-chips.js';
+      </view-import>
+      <view-article>
+        <view-source>
+          <material-input-chips label="укажите дни недели">
+            <material-chip action="clear">понедельник</material-chip>
+            <material-chip action="clear">вторник</material-chip>
+            <material-chip action="clear">среда</material-chip>
+          </material-input-chips>
+
+          <material-input-chips label="укажите дни недели" placeholder="четверг">
+            <material-chip action="clear">понедельник</material-chip>
+            <material-chip action="clear">вторник</material-chip>
+            <material-chip action="clear">среда</material-chip>
+          </material-input-chips>
+        </view-source>
+        <view-source lang="css" only>
+          material-input-chips { width: 100%; }
+        </view-source>
+      </view-article>
+    </view-section>
   </view-page>
 </template>

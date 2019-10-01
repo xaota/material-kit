@@ -10,6 +10,7 @@ import '/material/components/input/material-input.js';
 import '/material/components/input-slider/material-input-slider.js';
 import '/material/components/input-count/material-input-count.js';
 import '/material/components/input-color/material-input-color.js';
+import '/material/components/input-chips/material-input-chips.js';
 import '/material/components/textarea/material-textarea.js';
 
 const component = Component.meta(import.meta.url, 'page-input');

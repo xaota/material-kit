@@ -1,7 +1,9 @@
 @charset "utf-8";
 
 :host {
-
+  display: block;
 }
 
-
+material-input-chips {
+  width: 100%;
+}
