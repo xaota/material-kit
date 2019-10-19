@@ -10,9 +10,9 @@
     <!-- <script src="/prism-highlight/prism.js"></script> -->
   </head>
   <body>
-    <material-header caption="Material UI Design" description="Web Components Library">
-      <div slot="left"><a href="#">Material UI Design</a></div>
-      <div>Web Components Library</div>
+    <material-header>
+      <span slot="left"><a href="#">Material UI Design</a></span>
+      <span>Web Components Library</span>
     </material-header>
 
     <view-aside>
@@ -40,7 +40,6 @@
         <a href="#caption">Название</a>
         <a href="#text">Текстовый блок</a>
         <a href="#blockquote">Цитата</a>
-        <a href="#breadcrumbs">Следы</a>
         <a href="#copyright">Копирайт</a>
         <a href="#avatar">Аватар</a>
         <a href="#icon">Иконка</a>
@@ -70,11 +69,15 @@
         <a href="#title">Колонтитулы</a>
         <a href="#header">Заголовок</a>
         <a href="#panel">Панель</a>
-        <a href="#navigation">Панель навигации</a>
         <a href="#footer">Подвал</a>
         <a href="#sheet">Список элементов</a>
         <a href="#table">Таблица</a>
         <a href="#grid">Сетка</a>
+      </material-fieldset>
+      <material-fieldset caption="Навигация" fold>
+        <a href="#navigation">Панель навигации</a>
+        <a href="#brick">Кирпич</a>
+        <a href="#breadcrumbs">Следы</a>
       </material-fieldset>
       <material-fieldset caption="Динамические элементы" fold>
         <a href="#tabs">Вкладки</a>
@@ -143,6 +146,7 @@
       <page-rating id="rating"></page-rating>
       <page-slider id="slider"></page-slider>
       <page-fab id="fab"></page-fab>
+      <page-brick id="brick"></page-brick>
       <page-default></page-default>
     </main>
 

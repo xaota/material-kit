@@ -1,6 +1,7 @@
-import '/material/components/title/material-title.js';
+// import '/material/components/title/material-title.js';
 import '/material/components/fieldset/material-fieldset.js';
 import '/material/components/list-item/material-list-item.js';
+import '/material/components/header/material-header.js';
 
 import './views/aside/view-aside.js';
 
@@ -53,3 +54,4 @@ import './pages/timepicker/page-timepicker.js';
 import './pages/rating/page-rating.js';
 import './pages/slider/page-slider.js';
 import './pages/fab/page-fab.js';
+import './pages/brick/page-brick.js';
