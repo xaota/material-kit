@@ -55,3 +55,4 @@ import './pages/rating/page-rating.js';
 import './pages/slider/page-slider.js';
 import './pages/fab/page-fab.js';
 import './pages/brick/page-brick.js';
+import './pages/keyboard/page-keyboard.js';

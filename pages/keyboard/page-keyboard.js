@@ -6,20 +6,14 @@ import '../../views/article/view-article.js';
 import '../../views/source/view-source.js';
 import '../../views/import/view-import.js';
 
-import '/material/components/message/material-message.js';
-import '/material/components/avatar/material-avatar.js';
-
 import '/material/components/keyboard/material-keyboard.js';
 import '/material/components/keyboard-line/material-keyboard-line.js';
 
-// содержимое клавиатуры
-import '/material/components/button/material-button.js';
-
-const component = Component.meta(import.meta.url, 'page-message');
+const component = Component.meta(import.meta.url, 'page-keyboard');
 /**
   *
   */
-  class MessagePage extends Component {
+  class KeyboardPage extends Component {
   /**
     *
     */
@@ -28,7 +22,7 @@ const component = Component.meta(import.meta.url, 'page-message');
     }
   }
 
-Component.define(component, MessagePage);
+Component.define(component, KeyboardPage);
 
 // #region [Private]
 

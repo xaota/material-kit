@@ -7,6 +7,13 @@
 
       // также в примерах на этой странице используются
       import MaterialAvatar from '/material/components/avatar/material-avatar.js';
+
+      // клавиатура
+      import MaterialKeyboard     from '/material/components/keyboard/material-keyboard.js';
+      import MaterialKeyboardLine from '/material/components/keyboard-line/material-keyboard-line.js';
+
+      // содержимое клавиатуры
+      import MaterialButton  from '/material/components/button/material-button.js';
     </view-import>
 
     <view-section caption="Сообщение в чате" element="MaterialMessage">
@@ -30,6 +37,48 @@
           <material-message left>Текст сообщения</material-message>
           <material-message>Текст сообщения</material-message>
           <material-message right>Текст сообщения</material-message>
+        </view-source>
+      </view-article>
+
+
+      <view-article caption="Сообщения с клавиатурой">
+        <view-source>
+          <material-message left>
+            <material-avatar slot="avatar" src="./content/avatar/avatar-6.jpg"></material-avatar>
+            Текст сообщения
+            <material-keyboard slot="markup">
+              <material-keyboard-line>
+                <material-button>1</material-button>
+                <material-button>2</material-button>
+                <material-button>3</material-button>
+              </material-keyboard-line>
+              <material-keyboard-line>
+                <material-button>4</material-button>
+                <material-button>5</material-button>
+              </material-keyboard-line>
+              <material-keyboard-line>
+                <material-button>6</material-button>
+              </material-keyboard-line>
+            </material-keyboard>
+          </material-message>
+
+          <material-message right>
+              Текст сообщения
+              <material-keyboard slot="markup">
+                <material-keyboard-line>
+                  <material-button>1</material-button>
+                  <material-button>2</material-button>
+                  <material-button>3</material-button>
+                </material-keyboard-line>
+                <material-keyboard-line>
+                  <material-button>4</material-button>
+                  <material-button>5</material-button>
+                </material-keyboard-line>
+                <material-keyboard-line>
+                  <material-button>6</material-button>
+                </material-keyboard-line>
+              </material-keyboard>
+            </material-message>
         </view-source>
       </view-article>
 

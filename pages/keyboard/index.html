@@ -1,0 +1,41 @@
+<template>
+  <link rel="stylesheet" href="./page-keyboard.css" />
+
+  <view-page caption="Клавиатура" hash="Keyboard" description="Набор строк кнопок и других элементов для совершения действий">
+    <view-section caption="Клавиатура" element="MaterialKeyboard">
+      <view-import>
+        import MaterialKeyboard     from '/material/components/keyboard/material-keyboard.js';
+        import MaterialKeyboardLine from '/material/components/keyboard-line/material-keyboard-line.js';
+
+        // содержимое клавиатуры
+        import MaterialButton  from '/material/components/button/material-button.js';
+      </view-import>
+
+      <view-article>
+        <view-source>
+          <material-keyboard>
+            <material-keyboard-line>
+              <material-button>1</material-button>
+              <material-button>2</material-button>
+              <material-button>3</material-button>
+            </material-keyboard-line>
+            <material-keyboard-line>
+              <material-button>4</material-button>
+              <material-button>5</material-button>
+            </material-keyboard-line>
+            <material-keyboard-line>
+              <material-button>6</material-button>
+            </material-keyboard-line>
+          </material-keyboard>
+        </view-source>
+
+        <view-source lang="css" only>
+          material-keyboard {
+            width: 480px;
+          }
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>
