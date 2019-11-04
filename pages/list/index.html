@@ -19,6 +19,27 @@
           </material-list>
         </view-source>
       </view-article>
+
+      <view-article caption="Создание с помощью JavaScript">
+        <view-source id="create-list">
+          <material-button>создать</material-button>
+          <output></output>
+        </view-source>
+
+        <view-source lang="javascript" only>
+const button = node.querySelector('material-button');
+button.addEventListener('click', createList);
+
+function createList() {
+  const output = node.querySelector('output');
+  // output.innerHTML = '';
+  const list   = new MaterialList();
+  const array  = ['элемент 1', 'элемент 2', 'элемент 3', 'элемент 4', 'элемент 5'];
+  array.forEach((item, index) => list.appendChild(new MaterialListItem(index, item)));
+  output.appendChild(list);
+}
+        </view-source>
+      </view-article>
     </view-section>
   </view-page>
 
