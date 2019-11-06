@@ -9,13 +9,29 @@
     <view-section caption="Разворачиваемая панель" element="MaterialExpand">
       <view-article>
         <view-source>
-            <material-expand summary="Название разворачиваемой панели, содержимое внутри">
-              Скрытое содержимое
-            </material-expand>
+          <material-expand summary="Название разворачиваемой панели, содержимое внутри">
+            Скрытое содержимое
+          </material-expand>
 
           <material-expand summary="Разворачиваемая панель" description="Дополнительная информация">
             Скрытое содержимое
           </material-expand>
+        </view-source>
+      </view-article>
+
+      <view-article caption="Работа через JavaScript">
+        <view-source lang="JavaScript" only>
+const expand = root.querySelector('material-expand');
+
+/* содержимое */
+expand.summary     = 'Заголовок';
+expand.description = 'Дополнительная информация';
+expand.appendChild(content); // содержимое
+
+/* события */
+expand.addEventListener('expand', e => console.log(e.detail.expanded)); // при сворачивании/разворачивании блока
+expand.addEventListener('fold',   e => console.log('блок свёрнут'));    // при сворачивании блока
+expand.addEventListener('unfold', e => console.log('блок развёрнут'));  // при разворачивании блока
         </view-source>
       </view-article>
     </view-section>
