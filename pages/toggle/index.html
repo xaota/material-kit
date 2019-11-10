@@ -30,16 +30,32 @@
     </view-section>
 
     <view-section caption="Переключатели" element="MaterialRadio">
-      <view-import>
-        import MaterialRadio from '/material/components/radio/material-radio.js';
-      </view-import>
-
-      <view-article>
+      <view-article caption="Переключатель">
+        <view-import>
+          import MaterialRadio from '/material/components/radio/material-radio.js';
+        </view-import>
         <view-source>
-          <material-radio></material-radio>
+          <material-radio value="a" checked></material-radio>
+          <material-radio value="b"></material-radio>
+          <material-radio value="c" disabled checked></material-radio>
+          <material-radio value="d" disabled></material-radio>
+        </view-source>
+      </view-article>
+
+      <view-article caption="Группа переключателей">
+        <view-import>
+          import MaterialRadioGroup from '/material/components/radio-group/material-radio-group.js';
+          import MaterialRadio from '/material/components/radio/material-radio.js';
+        </view-import>
+        <view-source>
+          <material-radio-group name="group">
+            <material-radio value="a"></material-radio>
+            <material-radio value="b" checked></material-radio>
+            <material-radio value="c"></material-radio>
+            <material-radio value="d"></material-radio>
+          </material-radio-group>
         </view-source>
       </view-article>
     </view-section>
   </view-page>
-
 </template>

@@ -10,6 +10,8 @@ import '/material/components/switch/material-switch.js';
 import '/material/components/checkbox/material-checkbox.js';
 import '/material/components/radio/material-radio.js';
 
+import MaterialRadioGroup from '/material/components/radio-group/material-radio-group.js';
+
 const component = Component.meta(import.meta.url, 'page-toggle');
 /**
   *

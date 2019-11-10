@@ -29,9 +29,14 @@ expand.description = 'Дополнительная информация';
 expand.appendChild(content); // содержимое
 
 /* события */
-expand.addEventListener('expand', e => console.log(e.detail.expanded)); // при сворачивании/разворачивании блока
-expand.addEventListener('fold',   e => console.log('блок свёрнут'));    // при сворачивании блока
-expand.addEventListener('unfold', e => console.log('блок развёрнут'));  // при разворачивании блока
+// при сворачивании/разворачивании блока
+expand.addEventListener('expand', e => console.log(e.detail.expanded));
+
+// при сворачивании блока
+expand.addEventListener('fold',   e => console.log('блок свёрнут'));
+
+// при разворачивании блока
+expand.addEventListener('unfold', e => console.log('блок развёрнут'));
         </view-source>
       </view-article>
     </view-section>
