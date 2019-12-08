@@ -6,11 +6,19 @@
       <view-import>
         import MaterialChip from '/material/components/chip/material-chip.js';
       </view-import>
-      <view-article>
+      <view-article caption="с заливкой">
         <view-source>
           <material-chip>chip 1</material-chip>
           <material-chip action="clear">chip 2</material-chip>
           <material-chip action="create">chip 3</material-chip>
+        </view-source>
+      </view-article>
+
+      <view-article caption="с обводкой">
+        <view-source>
+          <material-chip outline>chip 1</material-chip>
+          <material-chip outline action="clear">chip 2</material-chip>
+          <material-chip outline action="create">chip 3</material-chip>
         </view-source>
       </view-article>
     </view-section>
@@ -19,11 +27,19 @@
         <view-import>
           import MaterialChipTooltip from '/material/components/chip-tooltip/material-chip-tooltip.js';
         </view-import>
-        <view-article>
+        <view-article caption="с заливкой цветом">
           <view-source>
             <material-chip-tooltip content="подсказка">chip 1</material-chip-tooltip>
             <material-chip-tooltip action="clear" content="подсказка" action="clear">chip 2</material-chip-tooltip>
             <material-chip-tooltip action="create" content="подсказка" action="create">chip 3</material-chip-tooltip>
+          </view-source>
+        </view-article>
+
+        <view-article caption="с обводкой">
+          <view-source>
+            <material-chip-tooltip outline content="подсказка">chip 1</material-chip-tooltip>
+            <material-chip-tooltip outline action="clear" content="подсказка" action="clear">chip 2</material-chip-tooltip>
+            <material-chip-tooltip outline action="create" content="подсказка" action="create">chip 3</material-chip-tooltip>
           </view-source>
         </view-article>
       </view-section>
