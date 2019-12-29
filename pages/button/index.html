@@ -199,9 +199,38 @@ const buttonC = new MaterialButton({label: 'текст', mode: 'primary', text: 
         </view-source>
         <view-source lang="javascript" only>
 const voice = root.querySelector('material-button-voice'); // первая кнопка
-const textarea = root.querySelector('material-textarea');
+const output = root.querySelector('material-textarea');
 
-voice.addEventListener('recognize', e => textarea.value = e.detail.text);
+voice.addEventListener('recognize', e => output.value = e.detail.text);
+        </view-source>
+        <view-source lang="css" only>
+material-textarea {
+  width: 90%;
+  display: block;
+}
+        </view-source>
+      </view-article>
+    </view-section>
+
+    <view-section caption="Кнопка для синтеза речи" description="">
+      <view-import>
+        import MaterialButtonSpeech from '/material/components/button-speech/material-button-speech.js';
+
+        // также в этом разделе используется
+        import MaterialTextarea from '/material/components/textarea/material-textarea.js';
+      </view-import>
+      <view-article>
+        <view-source id="speech-button-demo">
+          <material-button-speech></material-button-speech>
+          <material-button-speech disabled></material-button-speech>
+
+          <material-textarea icon="volume_up" value="привет, мир!">текст для синтеза речи</material-textarea>
+        </view-source>
+        <view-source lang="javascript" only>
+const speech = root.querySelector('material-button-speech'); // первая кнопка
+const input = root.querySelector('material-textarea');
+
+input.addEventListener('change', e => speech.value = input.value);
         </view-source>
         <view-source lang="css" only>
 material-textarea {
