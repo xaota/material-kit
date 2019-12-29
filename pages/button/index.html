@@ -47,9 +47,7 @@ const buttonB = new MaterialButton('текст на кнопке');
 const buttonC = new MaterialButton({label: 'текст', mode: 'primary', text: 'outline'});
         </view-source>
       </view-article>
-    </view-section>
 
-    <view-section caption="Оформление кнопок">
       <view-article caption="Кнопки с обводкой">
         <view-source>
           <material-button text="outline">кнопка</material-button>
@@ -180,6 +178,36 @@ const buttonC = new MaterialButton({label: 'текст', mode: 'primary', text: 
           <material-button-upload-tooltip-icon content="подсказка">attach_file</material-button-upload-tooltip-icon>
           <material-button-upload-tooltip-icon content="подсказка" text="outline">attach_file</material-button-upload-tooltip-icon>
           <material-button-upload-tooltip-icon content="подсказка" text>attach_file</material-button-upload-tooltip-icon>
+        </view-source>
+      </view-article>
+    </view-section>
+
+    <view-section caption="Кнопка для голосового ввода" description="">
+      <view-import>
+        import MaterialButtonVoice from '/material/components/button-voice/material-button-voice.js';
+
+        // также в этом разделе используется
+        import MaterialTextarea from '/material/components/textarea/material-textarea.js';
+      </view-import>
+      <view-article>
+        <material-text>Работает только по HTTPS, неполная поддержка браузерами (точно работает в Chrome)</material-text>
+        <view-source id="voice-button-demo">
+          <material-button-voice></material-button-voice>
+          <material-button-voice disabled></material-button-voice>
+
+          <material-textarea icon="volume_up">голосовое сообщение</material-textarea>
+        </view-source>
+        <view-source lang="javascript" only>
+const voice = root.querySelector('material-button-voice'); // первая кнопка
+const textarea = root.querySelector('material-textarea');
+
+voice.addEventListener('recognize', e => textarea.value = e.detail.text);
+        </view-source>
+        <view-source lang="css" only>
+material-textarea {
+  width: 90%;
+  display: block;
+}
         </view-source>
       </view-article>
     </view-section>

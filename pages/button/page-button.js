@@ -20,6 +20,9 @@ import '/material/components/button-upload-tooltip-icon/material-button-upload-t
 
 import '/material/components/icon/material-icon.js';
 
+import MaterialButtonVoice from '/material/components/button-voice/material-button-voice.js';
+import MaterialTextarea from '/material/components/textarea/material-textarea.js';
+
 const component = Component.meta(import.meta.url, 'page-button');
 /**
   *
@@ -30,6 +33,18 @@ const component = Component.meta(import.meta.url, 'page-button');
     */
     constructor() {
       super(component);
+    }
+
+  /** */
+    mount(node) {
+      const root = node.querySelector('#voice-button-demo');
+
+      const voice = root.querySelector('material-button-voice'); // первая кнопка
+      const textarea = root.querySelector('material-textarea');
+
+      voice.addEventListener('recognize', e => textarea.value = e.detail.text);
+
+      return this;
     }
   }
 

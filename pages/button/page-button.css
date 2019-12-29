@@ -7,3 +7,9 @@
 div.root {
 
 }
+
+material-textarea {
+  margin-top: 1em;
+  width: 90%;
+  display: block;
+}
