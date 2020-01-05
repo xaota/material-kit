@@ -55,4 +55,5 @@ import './pages/rating/page-rating.js';
 import './pages/slider/page-slider.js';
 import './pages/fab/page-fab.js';
 import './pages/brick/page-brick.js';
-import './pages/keyboard/page-keyboard.js';
+import './pages/audio/page-audio.js';
+import './pages/diagram-linear/page-diagram-linear.js';

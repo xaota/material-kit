@@ -6,14 +6,13 @@ import '../../views/article/view-article.js';
 import '../../views/source/view-source.js';
 import '../../views/import/view-import.js';
 
-import '/material/components/keyboard/material-keyboard.js';
-import '/material/components/keyboard-line/material-keyboard-line.js';
+import '/material/components/audio/material-audio.js';
 
-const component = Component.meta(import.meta.url, 'page-keyboard');
+const component = Component.meta(import.meta.url, 'page-audio');
 /**
   *
   */
-  class KeyboardPage extends Component {
+  class AudioPage extends Component {
   /**
     *
     */
@@ -22,7 +21,7 @@ const component = Component.meta(import.meta.url, 'page-keyboard');
     }
   }
 
-Component.define(component, KeyboardPage);
+Component.define(component, AudioPage);
 
 // #region [Private]
 

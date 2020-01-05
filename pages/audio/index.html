@@ -1,0 +1,18 @@
+<template>
+  <link rel="stylesheet" href="./page-audio.css" />
+
+  <view-page caption="Аудио" hash="Audio" description="Элемент для воспроизведения аудиофайлов">
+    <view-section caption="Аудио" element="MaterialAudio">
+      <view-import>
+        import MaterialAudio from '/material/components/audio/material-audio.js';
+      </view-import>
+
+      <view-article>
+        <view-source>
+          <material-audio src="content/audio/t-rex-roar.mp3"></material-audio>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>

@@ -9,7 +9,6 @@ import '../../views/import/view-import.js';
 import '/material/components/message/material-message.js';
 import '/material/components/avatar/material-avatar.js';
 
-import '/material/components/keyboard/material-keyboard.js';
 import '/material/components/keyboard-line/material-keyboard-line.js';
 
 // содержимое клавиатуры
