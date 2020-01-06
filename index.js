@@ -57,3 +57,4 @@ import './pages/fab/page-fab.js';
 import './pages/brick/page-brick.js';
 import './pages/audio/page-audio.js';
 import './pages/diagram-linear/page-diagram-linear.js';
+import './pages/diagram-pie/page-diagram-pie.js';
