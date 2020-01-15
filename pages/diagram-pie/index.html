@@ -1,0 +1,18 @@
+<template>
+  <link rel="stylesheet" href="./page-diagram-pie.css" />
+
+  <view-page caption="Круговая Диаграмма" hash="Diagram-pie" description="круг, разделенный на секторы, относительный размер которых пропорционален численным значениям">
+    <view-section caption="Круговая" element="MaterialDiagram-pie">
+      <view-import>
+        import MaterialDiagramPie from '/material/components/diagram-pie/material-diagram-pie.js';
+      </view-import>
+
+      <view-article>
+        <view-source>
+          <material-diagram-pie></material-diagram-pie>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>
