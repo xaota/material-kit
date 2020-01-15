@@ -8,7 +8,7 @@
       </view-import>
 
       <view-article>
-        <view-source>
+        <view-source id="static">
           <material-diagram-linear></material-diagram-linear>
         </view-source>
         <view-source lang="javascript" only>
@@ -34,6 +34,37 @@ material-diagram-linear {
 }
         </view-source>
       </view-article>
+
+      <view-article>
+        <view-source id="dynamic">
+          <material-diagram-linear></material-diagram-linear>
+          <material-input-count min="0" max="20" step="1" id="field">точка</material-input-count>
+          <material-button id="demoButton">пыщ</material-button>
+        </view-source>
+        <view-source lang="javascript" only>
+          const diagramWithAdditionalPoints = root.querySelector('#dynamic material-diagram-linear');
+          diagramWithAdditionalPoints.addEventListener('load', () => {
+            diagramWithAdditionalPoints.store({
+            series: {
+              first: [2, 4, 5, 6, 7, 10, 7]
+            },
+            color: {
+              first: 'green'
+            }
+          });
+
+          const demoButton = root.querySelector("#demoButton");
+          demoButton.addEventListener('click', () => {
+            const stored = diagramWithAdditionalPoints.store();
+            const newpoint = root.querySelector('#field').value;
+            stored.series.first.push(newpoint);
+            diagramWithAdditionalPoints.store(stored);
+            diagramWithAdditionalPoints.init();
+          });
+          diagramWithAdditionalPoints.init();
+        </view-source>
+      </view-article>
+
     </view-section>
   </view-page>
 

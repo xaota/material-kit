@@ -22,7 +22,7 @@ const component = Component.meta(import.meta.url, 'page-diagram-linear');
 
   /** */
     mount(root) {
-      const diagram = root.querySelector('material-diagram-linear');
+      const diagram = root.querySelector('#static material-diagram-linear');
       diagram.addEventListener('load', () => {
         diagram.store({
           series: {
@@ -36,6 +36,28 @@ const component = Component.meta(import.meta.url, 'page-diagram-linear');
         });
         diagram.init();
       });
+
+      const diagramWithAdditionalPoints = root.querySelector('#dynamic material-diagram-linear');
+      diagramWithAdditionalPoints.addEventListener('load', () => {
+        diagramWithAdditionalPoints.store({
+        series: {
+          first: [2, 4, 5, 6, 7, 10, 7]
+        },
+        color: {
+          first: 'green'
+        }
+      });
+
+      const demoButton = root.querySelector("#demoButton");
+      demoButton.addEventListener('click', () => {
+        const stored = diagramWithAdditionalPoints.store();
+        const newpoint = root.querySelector('#field').value;
+        stored.series.first.push(newpoint);
+        diagramWithAdditionalPoints.store(stored);
+        diagramWithAdditionalPoints.init();
+      });
+      diagramWithAdditionalPoints.init();
+});
 
       return this;
     }
