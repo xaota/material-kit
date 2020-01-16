@@ -140,6 +140,13 @@ export default class ComponentName extends Component {
   // всякие другие методы тоже есть
   // наверн надо сделать реактивный метод `render`.
 
+/** Отслеживаемые атрибуты элемента / observedAttributes @readonly
+  * @return {array} список изменяемых атрибутов компонента
+  */
+  static get observedAttributes() {
+    return [...Object.keys(updateAttribute)]; // список атрибутов для отслеживания
+  }
+
 /** Изменение отслеживаемого атрибута / attributeChangedCallback @lifecycle
   * @param {string} name название изменяемого атрибута
   * @param {string} previous предыдущее значение ?null
