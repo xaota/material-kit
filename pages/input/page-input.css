@@ -7,3 +7,9 @@
 material-input-chips {
   width: 100%;
 }
+
+material-input-count {
+  width: 40%;
+  margin-right: 8%;
+}
+

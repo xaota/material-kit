@@ -7,6 +7,10 @@ import './views/aside/view-aside.js';
 
 import './pages/default/page-default.js';
 
+import './pages/diagram-linear/page-diagram-linear.js';
+import './pages/diagram-pie/page-diagram-pie.js';
+import './pages/diagram-donut/page-diagram-donut.js';
+
 import './pages/button/page-button.js';
 import './pages/input/page-input.js';
 import './pages/select/page-select.js';
@@ -42,12 +46,10 @@ import './pages/payment/page-payment.js';
 import './pages/navigation/page-navigation.js';
 import './pages/avatar/page-avatar.js';
 import './pages/sheet/page-sheet.js';
-// import './pages/camera/page-camera.js';
 import './pages/caption/page-caption.js';
 import './pages/text/page-text.js';
 import './pages/banner/page-banner.js';
 import './pages/panel/page-panel.js';
-// import './pages/stack/page-stack.js';
 import './pages/drawer/page-drawer.js';
 import './pages/timeline/page-timeline.js';
 import './pages/fieldset/page-fieldset.js';
@@ -57,6 +59,7 @@ import './pages/slider/page-slider.js';
 import './pages/fab/page-fab.js';
 import './pages/brick/page-brick.js';
 import './pages/audio/page-audio.js';
-import './pages/diagram-linear/page-diagram-linear.js';
-import './pages/diagram-pie/page-diagram-pie.js';
 import './pages/snackbar/page-snackbar.js';
+
+// import './pages/camera/page-camera.js';
+// import './pages/stack/page-stack.js';
