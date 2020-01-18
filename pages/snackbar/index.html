@@ -1,0 +1,97 @@
+<template>
+  <link rel="stylesheet" href="./page-snackbar.css" />
+
+  <view-page caption="Уведомления" hash="SnackBar" description="Информируют пользователей о процессе, который приложение выполнило или будет выполнять. Они временно появляются в определенной части экрана и не должны прерывать взаимодействие с UI и не переключать фокус пользователя.">
+    <material-text>Уведомления содержат одну строку текста, непосредственно связанную с выполняемой операцией</material-text>
+    <view-section caption="Уведомление" element="MaterialSnackbar">
+      <view-import>
+        import MaterialSnackbar from '/material/components/snackbar/material-snackbar.js';
+      </view-import>
+
+      <view-article>
+        <view-source>
+          <material-snackbar>это простое уведомление</material-snackbar>
+          <material-snackbar mode="error">это уведомление об ошибке</material-snackbar>
+          <material-snackbar mode="alert">это уведомление с предупреждением</material-snackbar>
+          <material-snackbar mode="info">это информационное уведомление</material-snackbar>
+          <material-snackbar mode="success">это уведомление об успешном окончании процесса</material-snackbar>
+        </view-source>
+      </view-article>
+
+      <view-article caption="Другие стили уведомлений">
+        <view-source>
+          <material-snackbar mode="lighten">это простое уведомление</material-snackbar>
+          <material-snackbar mode="darken">это простое уведомление</material-snackbar>
+          <material-snackbar mode="details">это простое уведомление</material-snackbar>
+          <material-snackbar mode="accent">это простое уведомление</material-snackbar>
+          <material-snackbar mode="primary">это простое уведомление</material-snackbar>
+          <material-snackbar mode="secondary">это простое уведомление</material-snackbar>
+        </view-source>
+      </view-article>
+
+      <view-article caption="Действия">
+        <view-source id="action-snackbar">
+          <material-snackbar mode="lighten" icon="extension">
+            Простое уведомление c действиями
+            <material-button slot="action" text>кнопка 1</material-button>
+            <material-button slot="action" text mode="accent">кнопка 2</material-button>
+          </material-snackbar>
+        </view-source>
+      </view-article>
+    </view-section>
+
+    <view-section caption="Создание с помощью JavaScript">
+      <view-article>
+        <view-source id="create-snackbar">
+          <material-button id="simple">обычный</material-button>
+          <material-button id="darken">темный</material-button>
+          <material-button id="icon">с иконкой</material-button>
+          <material-button id="success">об успешной операции</material-button>
+          <material-button id="info">информационный с иконкой</material-button>
+        </view-source>
+
+        <view-source lang="javascript" only>
+const simple  = root.querySelector('#simple');
+const darken  = root.querySelector('#darken');
+const icon    = root.querySelector('#icon');
+const success = root.querySelector('#success');
+const info    = root.querySelector('#info');
+
+simple
+  .addEventListener('click', _ => snackbar(root, 'текст уведомления'));
+
+darken
+  .addEventListener('click', _ => snackbar(root, {mode: 'darken', label: 'текст уведомления'}));
+
+icon
+  .addEventListener('click', _ => snackbar(root, {icon: 'chat', mode: 'lighten', label: 'вам сообщение'}));
+
+success
+  .addEventListener('click', _ => snackbar(root, {mode: 'success', label: 'загрузка завершена'}));
+
+info
+  .addEventListener('click', _ => snackbar(root, {icon: 'sync', mode: 'info', label: 'синхронизация'}));
+
+function snackbar(root, options = {icon, mode, label}) {
+  const element = new MaterialSnackbar(options);
+  root.appendChild(element);
+}
+        </view-source>
+      </view-article>
+    </view-section caption="Создание с помощью JavaScript">
+  </view-page>
+
+</template>
+
+<!--
+
+  try {
+    const resolve = await snackbar.open();
+    button.innerHTML = 'результат: ' + resolve;
+  } catch (error) {
+    button.innerHTML = 'результат: ' + error;
+  } finally {
+    dialog.close();
+  }
+
+ -->

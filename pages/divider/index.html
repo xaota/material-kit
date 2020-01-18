@@ -1,0 +1,70 @@
+<template>
+  <link rel="stylesheet" href="./page-divider.css" />
+
+  <view-page caption="Разделитель" hash="Dividers" description="Визуальное разделение групп элементов в списках и других блоках">
+    <view-import>
+      import MaterialDivider from '/material/components/divider/material-divider.js';
+
+      // также на этой странице используются
+      import MaterialList     from '/material/components/list/material-list.js';
+      import MaterialListItem from '/material/components/list-item/material-list-item.js';
+    </view-import>
+
+    <view-section caption="Горизонтальное разделение" element="MaterialDivider">
+      <view-article>
+        <view-source>
+          <material-list>
+            <material-list-item>Элемент 1</material-list-item>
+            <material-divider></material-divider>
+            <material-list-item>Элемент 2</material-list-item>
+            <material-divider></material-divider>
+            <material-list-item>Элемент 3</material-list-item>
+            <material-divider></material-divider>
+            <material-list-item>Элемент 4</material-list-item>
+          </material-list>
+        </view-source>
+      </view-article>
+
+      <view-article caption="Кастоимизация горизонтального разделителя">
+        <view-source>
+          <material-list>
+            <material-list-item>Элемент 1</material-list-item>
+            <material-divider middle></material-divider>
+            <material-list-item>Элемент 2</material-list-item>
+            <material-divider inset></material-divider>
+            <material-list-item>Элемент 3</material-list-item>
+            <material-divider middle inset></material-divider>
+            <material-list-item>Элемент 4</material-list-item>
+          </material-list>
+        </view-source>
+      </view-article>
+
+      <view-article caption="Горизонтальный разделитель с заголовком">
+        <view-source>
+          <material-list>
+            <material-divider>заголовок 0</material-divider>
+            <material-list-item>Элемент 1</material-list-item>
+            <material-divider>заголовок 1</material-divider>
+            <material-list-item>Элемент 2</material-list-item>
+            <material-divider middle>заголовок 2</material-divider>
+            <material-list-item>Элемент 3</material-list-item>
+            <material-divider inset>заголовок 3</material-divider>
+            <material-list-item>Элемент 4</material-list-item>
+            <material-divider middle inset>заголовок 4</material-divider>
+            <material-list-item>Элемент 5</material-list-item>
+          </material-list>
+        </view-source>
+      </view-article>
+
+    </view-section>
+
+    <view-section caption="Создание с помощью JavaScript">
+      <view-article caption="Горизонтальный разделитель">
+        <view-source lang="javascript" only>
+const divider = new MaterialDivider(options = {middle: false, inset: false});
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>

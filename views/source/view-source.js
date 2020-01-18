@@ -88,6 +88,8 @@ const component = Component.meta(import.meta.url, 'view-source');
       view.classList.add(this.getAttribute('lang') || 'html');
       view.textContent = code;
       if (window.hljs && window.hljs.highlightBlock) window.hljs.highlightBlock(view);
+      const viewed = [...slot.parentNode.querySelectorAll('pre')];
+      viewed.forEach(e => e.remove()); // !
       slot.parentNode.insertBefore(view, slot.nextSibling);
     }
   }
