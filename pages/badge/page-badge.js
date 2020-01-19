@@ -19,6 +19,18 @@ const component = Component.meta(import.meta.url, 'page-badge');
     constructor() {
       super(component);
     }
+
+  /** */
+    mount(node) {
+      const root = node.querySelector('#demo');
+
+      const badge = root.querySelector('material-badge'); // первый
+      const inc = root.querySelector('#inc');
+      const dec = root.querySelector('#dec');
+
+      inc.addEventListener('click', () => badge.count = parseInt(badge.count || 0) + 1);
+      dec.addEventListener('click', () => badge.count = parseInt(badge.count || 0) - 1);
+    }
   }
 
 Component.define(component, BadgePage);

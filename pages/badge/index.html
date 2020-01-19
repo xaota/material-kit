@@ -4,15 +4,90 @@
   <view-page caption="Метка" hash="Badge" description="Счетчик уведомлений на элементе">
     <view-import>
       import MaterialBadge from '/material/components/badge/material-badge.js';
+
+      // также на этой странице используются
+      import MaterialIcon from '/material/components/icon/material-icon.js';
     </view-import>
 
     <view-section caption="Простая метка" element="MaterialBadge">
       <view-article>
         <view-source>
-          <material-badge></material-badge>
+          <material-badge count="5">
+            <material-icon>folder_open</material-icon>
+          </material-badge>
+          <material-badge count="5" dot>
+            <material-icon>folder_open</material-icon>
+          </material-badge>
+        </view-source>
+      </view-article>
+
+      <view-article caption="Максимальное значение">
+        <view-source>
+          <material-badge count="15" max="9">
+            <material-icon>mail</material-icon>
+          </material-badge>
+          <material-badge count="15" max="99">
+            <material-icon>mail</material-icon>
+          </material-badge>
+          <material-badge count="150" max="99">
+            <material-icon>mail</material-icon>
+          </material-badge>
+        </view-source>
+      </view-article>
+
+      <view-article caption="Отображение наличия">
+        <view-source>
+          <material-badge count="0" dot>
+            <material-icon>folder_open</material-icon>
+          </material-badge>
+          <material-badge count="5" dot>
+            <material-icon>folder_open</material-icon>
+          </material-badge>
+        </view-source>
+      </view-article>
+
+      <view-article caption="Скрытие и показ значений">
+        <view-source id="demo">
+          <material-badge count="0">
+            <material-icon>mail</material-icon>
+          </material-badge>
+          <material-badge count="0" zero>
+            <material-icon>mail</material-icon>
+          </material-badge>
+          <material-badge count="5" hidden>
+            <material-icon>mail</material-icon>
+          </material-badge>
+          <br />
+          <material-button-icon id="dec" text="outline">remove</material-button-icon>
+          <material-button-icon id="inc" text="outline">add</material-button-icon>
+        </view-source>
+        <view-source lang="javascript" only>
+const badge = root.querySelector('material-badge'); // первый
+const inc = root.querySelector('#inc');
+const dec = root.querySelector('#dec');
+
+inc.addEventListener('click', () => badge.count = parseInt(badge.count || 0) + 1);
+dec.addEventListener('click', () => badge.count = parseInt(badge.count || 0) - 1);
+        </view-source>
+      </view-article>
+
+      <view-article caption="Положение метки">
+        <view-source>
+          <material-badge count="5">
+            <material-icon>mail</material-icon>
+          </material-badge>
+          <material-badge count="5" x="left">
+            <material-icon>mail</material-icon>
+          </material-badge>
+          <material-badge count="5" y="bottom">
+            <material-icon>mail</material-icon>
+          </material-badge>
+          <material-badge count="5" x="left" y="bottom">
+            <material-icon>mail</material-icon>
+          </material-badge>
         </view-source>
       </view-article>
     </view-section>
-  </view-page>
 
+  </view-page>
 </template>

@@ -4,4 +4,8 @@
   display: block;
 }
 
-
+material-paper {
+  width: 130px;
+  /* height: 150px; */
+  display: inline-block;
+}
