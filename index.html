@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./index.css" />
     <script src="./index.js" type="module"></script>
 
+    <script src="https://maps-js.apissputnik.ru/v0.3/sputnik_maps_bundle.min.js"></script>
     <script src="/highlight/highlight.pack.js"></script>
     <!-- <script src="/prism-highlight/prism.js"></script> -->
   </head>
@@ -47,6 +48,7 @@
         <a href="#badge">Метка</a>
         <a href="#tooltip">Подсказки</a>
         <a href="#message">Сообщения</a>
+        <a href="#paragraph">Параграфы</a>
       </material-fieldset>
       <material-fieldset caption="Элементы управления" fold>
         <a href="#button">Кнопки</a>
@@ -106,6 +108,10 @@
         <a href="#diagram-pie">Круговая</a>
         <a href="#diagram-donut">Пончиковая</a>
       </material-fieldset>
+      <material-fieldset caption="Навигация и Карты" fold>
+        <a href="#map-osm">Карта мира</a>
+        <a href="#map-svg">SVG карты (по зонам)</a>
+      </material-fieldset>
     </view-aside>
 
     <main>
@@ -160,6 +166,11 @@
       <page-fab id="fab"></page-fab>
       <page-brick id="brick"></page-brick>
       <page-snackbar id="snackbar"></page-snackbar>
+      <page-paragraph id="paragraph"></page-paragraph>
+
+      <page-map-osm id="map-osm"></page-map-osm>
+      <page-map-svg id="map-svg"></page-map-svg>
+
       <page-diagram-linear id="diagram-linear"></page-diagram-linear>
       <page-diagram-pie id="diagram-pie"></page-diagram-pie>
       <page-diagram-donut id="diagram-donut"></page-diagram-donut>

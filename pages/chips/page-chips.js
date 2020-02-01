@@ -6,6 +6,7 @@ import '../../views/article/view-article.js';
 import '../../views/source/view-source.js';
 import '../../views/import/view-import.js';
 
+import '/material/components/avatar/material-avatar.js';
 import '/material/components/chip/material-chip.js';
 import '/material/components/chip-tooltip/material-chip-tooltip.js';
 

@@ -1,0 +1,19 @@
+<template>
+  <link rel="stylesheet" href="./page-map-svg.css" />
+
+  <view-page caption="SVG карта" hash="map-svg" description="Элемент для показа зонированных SVG карт">
+    <view-section caption="По зонам" element="MaterialMapSvg">
+      <view-import>
+        import MaterialMapSvg from '/material/components/map-svg/material-map-svg.js';
+      </view-import>
+
+      <view-article>
+        <view-source>
+          <material-map-svg></material-map-svg>
+          <material-button-back>назад</material-button-back>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>

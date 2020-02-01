@@ -24,25 +24,73 @@
     </view-section>
 
     <view-section caption="Фишки с подсказкой" element="MaterialChipTooltip">
-        <view-import>
-          import MaterialChipTooltip from '/material/components/chip-tooltip/material-chip-tooltip.js';
-        </view-import>
-        <view-article caption="с заливкой цветом">
-          <view-source>
-            <material-chip-tooltip content="подсказка">chip 1</material-chip-tooltip>
-            <material-chip-tooltip action="clear" content="подсказка" action="clear">chip 2</material-chip-tooltip>
-            <material-chip-tooltip action="create" content="подсказка" action="create">chip 3</material-chip-tooltip>
-          </view-source>
-        </view-article>
+      <view-import>
+        import MaterialChipTooltip from '/material/components/chip-tooltip/material-chip-tooltip.js';
+      </view-import>
+      <view-article caption="с заливкой цветом">
+        <view-source>
+          <material-chip-tooltip content="подсказка">chip 1</material-chip-tooltip>
+          <material-chip-tooltip action="clear" content="подсказка" action="clear">chip 2</material-chip-tooltip>
+          <material-chip-tooltip action="create" content="подсказка" action="create">chip 3</material-chip-tooltip>
+        </view-source>
+      </view-article>
 
-        <view-article caption="с обводкой">
-          <view-source>
-            <material-chip-tooltip outline content="подсказка">chip 1</material-chip-tooltip>
-            <material-chip-tooltip outline action="clear" content="подсказка" action="clear">chip 2</material-chip-tooltip>
-            <material-chip-tooltip outline action="create" content="подсказка" action="create">chip 3</material-chip-tooltip>
-          </view-source>
-        </view-article>
-      </view-section>
+      <view-article caption="с обводкой">
+        <view-source>
+          <material-chip-tooltip outline content="подсказка">chip 1</material-chip-tooltip>
+          <material-chip-tooltip outline action="clear" content="подсказка" action="clear">chip 2</material-chip-tooltip>
+          <material-chip-tooltip outline action="create" content="подсказка" action="create">chip 3</material-chip-tooltip>
+        </view-source>
+      </view-article>
+    </view-section>
+
+    <view-section caption="Фишки с аватаром">
+      <view-import>
+        import MaterialAvatar from '/material/components/avatar/material-avatar.js';
+
+        import MaterialChip   from '/material/components/chip/material-chip.js';
+        // либо
+        import MaterialChipTooltip from '/material/components/chip-tooltip/material-chip-tooltip.js';
+      </view-import>
+      <view-article>
+        <view-source>
+          <material-chip>
+            chip 1
+          </material-chip>
+          <material-chip action="clear">
+            <material-avatar src="./content/avatar/avatar-10.jpg" slot="avatar"></material-avatar>
+            chip 2
+          </material-chip>
+          <material-chip outline>
+            <material-avatar src="./content/avatar/avatar-11.jpg" slot="avatar"></material-avatar>
+            chip 1
+          </material-chip>
+          <material-chip outline action="clear">
+            <material-avatar src="./content/avatar/avatar-12.jpg" slot="avatar"></material-avatar>
+            chip 2
+          </material-chip>
+        </view-source>
+
+        <view-source>
+          <material-chip-tooltip content="подсказка">
+            <material-avatar src="./content/avatar/avatar-13.jpg" slot="avatar"></material-avatar>
+            chip 1
+          </material-chip-tooltip>
+          <material-chip-tooltip content="подсказка" action="clear">
+            <material-avatar src="./content/avatar/avatar-14.jpg" slot="avatar"></material-avatar>
+            chip 2
+          </material-chip-tooltip>
+          <material-chip-tooltip content="подсказка" outline>
+            <material-avatar src="./content/avatar/avatar-15.jpg" slot="avatar"></material-avatar>
+            chip 1
+          </material-chip-tooltip>
+          <material-chip-tooltip content="подсказка" outline action="clear">
+            <material-avatar src="./content/avatar/avatar-16.jpg" slot="avatar"></material-avatar>
+            chip 2
+          </material-chip-tooltip>
+        </view-source>
+      </view-article>
+    </view-section>
   </view-page>
 
 </template>

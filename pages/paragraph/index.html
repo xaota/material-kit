@@ -1,0 +1,55 @@
+<template>
+  <link rel="stylesheet" href="./page-paragraph.css" />
+
+  <view-page caption="Параграф" hash="paragraph" description="Текстовый (и не только) блок">
+    <view-section caption="Параграфы" element="MaterialParagraph">
+      <view-import>
+        import Materialparagraph from '/material/components/paragraph/material-paragraph.js';
+      </view-import>
+
+      <view-article caption="Обычное использование для рендеринга блока текста">
+        <view-source>
+          <material-paragraph>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </material-paragraph>
+        </view-source>
+      </view-article>
+
+      <view-article caption="Использование для рендеринга блока текста с разметкой через JS" id="demo-1">
+        <view-source>
+          <material-paragraph></material-paragraph>
+        </view-source>
+        <view-source lang="javascript" only>
+const text = 'Lorem ipsum dolor sit amet, ... ';
+const payload = [
+  {type: 'bold', offset: 18, length: 8},
+  {type: 'italic', offset: 132, length: 15}
+];
+
+const paragraph = root.querySelector('material-paragraph'); // изначально пустой
+paragraph.store({text, payload}).init();
+        </view-source>
+      </view-article>
+
+      <view-article caption="Вложенные теги" id="demo-2">
+        <view-source>
+          <material-paragraph></material-paragraph>
+        </view-source>
+        <view-source lang="javascript" only>
+const text = 'Lorem ipsum dolor sit amet, ... ';
+const payload = [
+  {type: 'bold', offset: 18, length: 8},
+  {type: 'italic', offset: 132, length: 15}
+];
+
+const paragraph = root.querySelector('material-paragraph'); // изначально пустой
+paragraph.store({text, payload}).init();
+        </view-source>
+      </view-article>
+
+    </view-section>
+  </view-page>
+</template>

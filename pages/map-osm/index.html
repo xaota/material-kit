@@ -1,0 +1,31 @@
+<template>
+  <link rel="stylesheet" href="./page-map-osm.css" />
+
+  <view-page caption="OSM карта" hash="map-osm" description="Элемент для показа карты на основе данных OpenStreetMap">
+    <view-section caption="Карта мира" element="MaterialMapOSM">
+
+      <material-blockquote>стабильность компонента под вопросом</material-blockquote>
+
+      в <code>index.html</code> вашего проекта надо добавить какие-нибудь Leaflet карты, например:
+
+      <view-source lang="html" only>
+        <script src="https://maps-js.apissputnik.ru/v0.3/sputnik_maps_bundle.min.js"></script>
+      </view-source>
+
+      <view-import>
+        import MaterialMapOSM from '/material/components/map-osm/material-map-osm.js';
+      </view-import>
+
+      <view-article>
+        <view-source>
+          <material-map-osm
+            zoom="16"
+            latitude="54.7275011"
+            longitude="55.9353172">
+          </material-map-osm>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>

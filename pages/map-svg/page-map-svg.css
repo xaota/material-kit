@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+:host {
+
+}
+
+material-map-svg {
+  max-width: 780px;
+  max-height: 80vh;
+  margin: 0 auto;
+}
