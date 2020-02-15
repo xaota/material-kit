@@ -1,0 +1,18 @@
+<template>
+  <link rel="stylesheet" href="./page-editor.css" />
+
+  <view-page caption="Редактор текста" hash="editor" description="Элемент, который позволяет создать параграф текста с форматированием">
+    <view-section caption="Редактор текста" element="MaterialEditor">
+      <view-import>
+        import MaterialEditor from '/material/components/editor/material-editor.js';
+      </view-import>
+
+      <view-article>
+        <view-source>
+          <material-editor></material-editor>
+        </view-source>
+      </view-article>
+    </view-section>
+  </view-page>
+
+</template>

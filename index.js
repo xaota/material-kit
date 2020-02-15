@@ -66,3 +66,4 @@ import './pages/snackbar/page-snackbar.js';
 import './pages/paragraph/page-paragraph.js';
 import './pages/map-svg/page-map-svg.js';
 import './pages/map-osm/page-map-osm.js';
+import './pages/editor/page-editor.js';
