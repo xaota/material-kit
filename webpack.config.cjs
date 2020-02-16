@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
@@ -12,11 +12,12 @@ const isDevServer = path.basename(require.main.filename) === 'webpack-dev-server
 module.exports = {
   entry: '.',
   mode: isDevServer ? 'development' : 'production',
+  // eslint-disable-next-line require-jsdoc
   get plugins() {
     return [
         new HtmlWebpackPlugin({
             hash: true,
-            minify: isDevServer ? false : {
+            minify: !isDevServer && {
                 collapseWhitespace: true,
                 removeComments: true,
                 removeRedundantAttributes: true,
@@ -33,8 +34,9 @@ module.exports = {
         new SimpleProgressWebpackPlugin({
           format: isDevServer ? 'minimal' : 'verbose'
         }),
+        // eslint-disable-next-line multiline-ternary
         ...(isDevServer ? [
-            new OpenBrowserPlugin({ url: `http://${this.devServer.host}:${this.devServer.port}` })
+            new OpenBrowserPlugin({url: `http://${this.devServer.host}:${this.devServer.port}`})
         ] : [
             new CleanWebpackPlugin({
                 verbose: false
@@ -49,20 +51,9 @@ module.exports = {
         exclude: /node_modules\/(?!(web-material)\/).*/,
         use: [
           {
-            loader: 'babel-loader',
+            loader: '@sucrase/webpack-loader',
             options: {
-              "presets": [
-                [
-                  "@babel/preset-env", {
-                    "useBuiltIns": "usage",
-                    "corejs": 3
-                  }
-                ]
-              ],
-              "plugins": [
-                "@babel/plugin-proposal-class-properties",
-                "@babel/plugin-proposal-private-methods"
-              ]
+              transforms: []
             }
           },
           {
