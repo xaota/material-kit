@@ -38,7 +38,7 @@ body {
   font-weight: 200;
 
   height: 100%;
-  margin-top: calc(header);
+  margin-top: calc(60px);
   /* overflow: hidden; */
 }
 
