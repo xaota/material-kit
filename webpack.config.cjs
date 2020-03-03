@@ -3,7 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+const WebMaterialPlugin = require('web-material-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
@@ -15,33 +17,32 @@ module.exports = {
   // eslint-disable-next-line require-jsdoc
   get plugins() {
     return [
-        new HtmlWebpackPlugin({
-            hash: true,
-            minify: !isDevServer && {
-                collapseWhitespace: true,
-                removeComments: true,
-                removeRedundantAttributes: true,
-                removeScriptTypeAttributes: true,
-                removeStyleLinkTypeAttributes: true,
-                useShortDoctype: true
-            },
-            template: path.resolve(__dirname, 'index.ejs')
-        }),
-        new MiniCssExtractPlugin({
-            filename: 'css/[name].[contenthash:6].css',
-            chunkFileName: 'css/[id].[contenthash:6].css'
-        }),
-        new SimpleProgressWebpackPlugin({
-          format: isDevServer ? 'minimal' : 'verbose'
-        }),
-        // eslint-disable-next-line multiline-ternary
-        ...(isDevServer ? [
-            new OpenBrowserPlugin({url: `http://${this.devServer.host}:${this.devServer.port}`})
-        ] : [
-            new CleanWebpackPlugin({
-                verbose: false
-            })
-        ])
+      new HtmlWebpackPlugin({
+        hash: true,
+        template: path.resolve(__dirname, 'index.ejs')
+      }),
+      new CopyWebpackPlugin([{
+        from: "content",
+        to: 'content'
+      }]),
+      new MiniCssExtractPlugin({
+        filename: 'css/[name].[contenthash:6].css',
+        chunkFileName: 'css/[id].[contenthash:6].css'
+      }),
+      new SimpleProgressWebpackPlugin({
+        format: isDevServer ? 'minimal' : 'verbose'
+      }),
+      // eslint-disable-next-line multiline-ternary
+      ...(isDevServer ? [
+        new OpenBrowserPlugin({url: `http://${this.devServer.host}:${this.devServer.port}`})
+      ] : [
+        new CleanWebpackPlugin({
+          verbose: false
+        })
+      ]),
+      new WebMaterialPlugin({
+        test: /(\/material|\/page|\/view)-[^/]+\.js$/
+      })
     ]
   },
   module: {
@@ -81,6 +82,81 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.(png|jpg|gif|ico|webp|svg|woff2)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'images/[name].[hash:hex:6].[ext]',
+              esModule: false
+            }
+          }
+        ]
+      },
+      {
+        test: /index\.html$/,
+        include: [
+          path.join(path.dirname(require.resolve('web-material')), 'components')
+        ],
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'html/material/[folder].[ext]'
+            }
+          },
+          'extract-loader',
+          {
+            loader: 'html-loader',
+            options: {
+              attributes: false
+            }
+          }
+        ]
+      },
+      {
+        test: /index\.html$/,
+        include: [
+          path.resolve(__dirname, 'pages')
+        ],
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'html/page/[folder].[ext]'
+            }
+          },
+          'extract-loader',
+          {
+            loader: 'html-loader',
+            options: {
+              attributes: false
+            }
+          }
+        ]
+      },
+      {
+        test: /index\.html$/,
+        include: [
+          path.resolve(__dirname, 'views')
+        ],
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'html/view/[folder].[ext]'
+            }
+          },
+          'extract-loader',
+          {
+            loader: 'html-loader',
+            options: {
+              attributes: false
+            }
+          }
+        ]
       }
     ]
   },
@@ -101,10 +177,10 @@ module.exports = {
     host: 'localhost',
     contentBase: path.resolve(__dirname, 'build'),
     stats: {
-        all: false,
-        colors: true,
-        errors: true,
-        warnings: true
+      all: false,
+      colors: true,
+      errors: true,
+      warnings: true
     },
     clientLogLevel: 'error',
     noInfo: true,
