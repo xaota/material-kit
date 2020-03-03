@@ -19,7 +19,7 @@ module.exports = {
     return [
       new HtmlWebpackPlugin({
         hash: true,
-        template: path.resolve(__dirname, 'index.ejs')
+        template: path.resolve(__dirname, 'index.html')
       }),
       new CopyWebpackPlugin([{
         from: 'content',
