@@ -19,10 +19,18 @@ module.exports = {
     return [
       new HtmlWebpackPlugin({
         hash: true,
-        template: path.resolve(__dirname, 'index.ejs')
+        template: path.resolve(__dirname, 'index.ejs'),
+        minify: isDevServer && {
+          collapseWhitespace: true,
+          removeComments: true,
+          removeRedundantAttributes: true,
+          removeScriptTypeAttributes: true,
+          removeStyleLinkTypeAttributes: true,
+          useShortDoctype: true
+        }
       }),
       new CopyWebpackPlugin([{
-        from: "content",
+        from: 'content',
         to: 'content'
       }]),
       new MiniCssExtractPlugin({
@@ -65,15 +73,11 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          // {
-          //   loader: MiniCssExtractPlugin.loader,
-          //   options: {
-          //     hmr: isDevServer,
-          //     publicPath: '..'
-          //   }
-          // },
           {
-            loader: 'style-loader'
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: isDevServer
+            }
           },
           {
             loader: 'css-loader',
