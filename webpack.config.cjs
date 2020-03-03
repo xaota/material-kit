@@ -19,15 +19,7 @@ module.exports = {
     return [
       new HtmlWebpackPlugin({
         hash: true,
-        template: path.resolve(__dirname, 'index.ejs'),
-        minify: isDevServer && {
-          collapseWhitespace: true,
-          removeComments: true,
-          removeRedundantAttributes: true,
-          removeScriptTypeAttributes: true,
-          removeStyleLinkTypeAttributes: true,
-          useShortDoctype: true
-        }
+        template: path.resolve(__dirname, 'index.ejs')
       }),
       new CopyWebpackPlugin([{
         from: 'content',
@@ -95,69 +87,6 @@ module.exports = {
             options: {
               name: 'images/[name].[hash:hex:6].[ext]',
               esModule: false
-            }
-          }
-        ]
-      },
-      {
-        test: /index\.html$/,
-        include: [
-          path.join(path.dirname(require.resolve('web-material')), 'components')
-        ],
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'html/material/[folder].[ext]'
-            }
-          },
-          'extract-loader',
-          {
-            loader: 'html-loader',
-            options: {
-              attributes: false
-            }
-          }
-        ]
-      },
-      {
-        test: /index\.html$/,
-        include: [
-          path.resolve(__dirname, 'pages')
-        ],
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'html/page/[folder].[ext]'
-            }
-          },
-          'extract-loader',
-          {
-            loader: 'html-loader',
-            options: {
-              attributes: false
-            }
-          }
-        ]
-      },
-      {
-        test: /index\.html$/,
-        include: [
-          path.resolve(__dirname, 'views')
-        ],
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'html/view/[folder].[ext]'
-            }
-          },
-          'extract-loader',
-          {
-            loader: 'html-loader',
-            options: {
-              attributes: false
             }
           }
         ]
